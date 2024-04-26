@@ -27,7 +27,6 @@ $color-palette-active-link: #027ABB;
 $length-title-font-size: 50px;
 $length-section-title-font-size: 20px;
 $length-main-text-size: 16px;
-$color-hint-text-color: #444444;
 $color-error-color: #ff0126;
 
 /*INPUTS*/
@@ -828,7 +827,7 @@ table {
 .wFormContainer .count-words {
   font-size: 0.85em;
   margin-top: 2px;
-  color: $color-hint-text-color;
+  // color: $color-palette-neutral-body-text;
 }
 
 #preview #render .wForm .oneField.hintsTooltip .field-hint {
@@ -844,13 +843,13 @@ table {
 
 .wForm .field-hint-inactive .hint {
   background-color: $color-palette-neutral-light-background !important;
-  color: $color-hint-text-color !important;
+  // color: $color-palette-neutral-body-text !important;
   opacity: 1 !important;
 }
 
 .wForm .hintsBelow .field-hint, .wform .hintsSide .field-hint {
   background-color: $color-palette-neutral-light-background !important;
-  color: $color-hint-text-color !important;
+  // color: $color-palette-neutral-body-text !important;
   opacity: 1 !important;
 }
 
