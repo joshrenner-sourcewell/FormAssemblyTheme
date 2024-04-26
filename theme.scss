@@ -53,10 +53,6 @@ $color-button-hover-background-color: $color-palette-active-hover;
 $length-button-padding-y: 15px;
 $length-button-padding-x: 45px;
 
-/*PROGRESS BAR*/
-$color-progress-bar-text-color: #dddddd;
-$color-progress-bar-color: #444444;
-
 /*---------------------*/
 /*Combatting some phantom BS*/
 body:not(.drag) #preview .hover:not(.selected):not(tr):before {
@@ -438,21 +434,6 @@ table {
 /*INPUTS*/
 
 /* Main container. Must wrap *all* theme CSS */
-.wFormContainer {
-  /* LTR support */
-}
-
-.wFormContainer .wForm {
-  /* container for the input(s) and decorators */
-}
-
-.wFormContainer .wForm .inputWrapper {
-  /* inputs */
-  /* Input with focus */
-  /* Placeholder Text */
-  /* Faux-checkbox / radios */
-}
-
 .wFormContainer .wForm .inputWrapper input[type='text'],
 .wFormContainer .wForm .inputWrapper input[type='password'],
 .wFormContainer .wForm .inputWrapper select,
@@ -727,146 +708,7 @@ table {
   color: $color-palette-neutral-body-text !important;
 }
 
-/*CALENDAR*/
-/** Calendar - popup is inserted outside of the .wFormContainer **/
-html {
-  /* Calendar container */
-}
-
-html .kalendae {
-  border: 2px solid $color-palette-neutral-60-steel-blue !important;
-  font-size: 100%;
-  font-family: $font-type-font;
-  border-radius: $length-input-border-radius;
-  padding: 1rem;
-  /** Container for the 1-month view **/
-}
-
-html .kalendae .k-calendar {
-  /* ensures proper alignment of the 7 days */
-  width: 14em;
-
-  /* divisible by 7 */
-  /** Kalendae.Input's popup close button **/
-  /** Month Title Row **/
-  /** Month and Year Buttons **/
-  /** Days in the current month **/
-  /* Days outside of the current month */
-  /** Selected day, when inside the selectable area **/
-  /** Selectable day, hovered **/
-}
-
-html .kalendae .k-calendar .k-header span, html .kalendae .k-calendar .k-days span {
-  /* 1/7th of the width, minus margin. */
-  width: calc(2em - 2px) !important;
-  /* margin */
-  margin-left: 1px !important;
-  margin-right: 1px !important;
-  /* ensure any border or padding is accounted for. */
-  box-sizing: border-box !important;
-}
-
-html .kalendae .k-calendar .k-title, html .kalendae .k-calendar .k-header, html .kalendae .k-calendar .k-days {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  // color: $color-palette-neutral-body-text;
-}
-
-html .kalendae .k-calendar .k-header span,
-html .kalendae .k-calendar .k-days span {
-  height: inherit;
-  line-height: inherit;
-  text-align: center;
-  padding: 2px .25em 2px 2px;
-}
-
-html .kalendae .k-calendar .k-btn-close:hover {
-  color: #444444;
-  border-color: #ffffff;
-}
-
-html .kalendae .k-calendar .k-caption {
-  font-size: 100%;
-  color: $color-palette-primary-steel-blue;
-}
-
-html .kalendae .k-calendar .k-btn-previous-month,
-html .kalendae .k-calendar .k-btn-next-month,
-html .kalendae .k-calendar .k-btn-previous-year,
-html .kalendae .k-calendar .k-btn-next-year {
-  color: $color-palette-primary-steel-blue;
-  line-height: normal;
-  height: auto;
-  font-size: 1.4em;
-  font-weight: 400;
-}
-
-html .kalendae .k-calendar .k-btn-previous-month:hover,
-html .kalendae .k-calendar .k-btn-next-month:hover,
-html .kalendae .k-calendar .k-btn-previous-year:hover,
-html .kalendae .k-calendar .k-btn-next-year:hover {
-  color: $color-palette-primary-steel-blue;
-  font-weight: 700;
-}
-
-html .kalendae .k-calendar .k-header span {
-  // color: $color-palette-neutral-body-text;
-  margin: 5px auto;
-}
-
-html .kalendae .k-calendar .k-days span.k-in-month {
-  // color: $color-palette-neutral-body-text;
-  border-color: rgba(0, 0, 0, 0.1);
-  height: 30px;
-  padding-top: 5px;
-  margin-bottom: 5px;
-  opacity: .7;
-}
-
-html .kalendae .k-calendar .k-days span.k-in-month.k-active {
-  color: $color-button-text-color;
-  border-color: rgba(0, 0, 0, 0.1);
-  background-color: $color-button-background-color;
-  height: 30px;
-  padding-top: 5px;
-  margin-bottom: 5px;
-  opacity: .7;
-}
-
-html .kalendae .k-calendar .k-days span.k-out-of-month {
-  // color: $color-palette-neutral-body-text;
-  background-color: rgba(0, 0, 0, 0);
-  height: 30px;
-  padding-top: 5px;
-  margin-bottom: 5px;
-  opacity: .5;
-}
-
-html .kalendae .k-calendar .k-days span.k-selected.k-active {
-  background: $color-button-background-color;
-  color: $color-button-text-color;
-  opacity: 1;
-}
-
-html .kalendae .k-calendar .k-days span.k-active:hover {
-  border-color: $color-palette-neutral-60-steel-blue;
-  opacity: 1;
-}
-
 /*ERRORS*/
-.wFormContainer {
-  /* Indicator for an error on a field */
-}
-
-.wFormContainer .oneField.errFld {
-  /* Error message, below input */
-}
-
-.wFormContainer .oneField.errFld .inputWrapper {
-  /* Input with error */
-}
-
 .wFormContainer .oneField.errFld .inputWrapper input[type='text'],
 .wFormContainer .oneField.errFld .inputWrapper input[type='password'],
 .wFormContainer .oneField.errFld .inputWrapper textarea,
@@ -877,11 +719,6 @@ html .kalendae .k-calendar .k-days span.k-active:hover {
 .wFormContainer .oneField.errFld div.errMsg {
   margin-top: 0.5em;
   color: $color-palette-error;
-}
-
-.wfTab.errMsg {
-  border: 1px solid $color-palette-error !important;
-  background-color: $color-palette-neutral-light-background;
 }
 
 .errorMessage {
@@ -949,10 +786,4 @@ a.errMsg {
   display: inline;
   float: right;
   text-align: inherit;
-}
-
-/* Apply colors to progress bar */
-.wfProgressBar {
-  color: $color-progress-bar-text-color;
-  background-color: $color-progress-bar-color;
 }
