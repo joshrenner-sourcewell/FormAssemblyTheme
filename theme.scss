@@ -27,7 +27,6 @@ $color-palette-active-link: #027ABB;
 $length-title-font-size: 50px;
 $length-section-title-font-size: 20px;
 $length-main-text-size: 16px;
-$color-main-text-color: #444444;
 $color-link-text-color: #005eff;
 $color-hint-text-color: #444444;
 $color-error-color: #ff0126;
@@ -108,7 +107,7 @@ $color-progress-bar-color: #444444;
 
 .wFormContainer .wForm {
   background-color: $color-palette-neutral-light-background;
-  color: $color-main-text-color;
+  color: $color-palette-neutral-body-text;
   border: none;
   border-radius: .2rem;
   padding: 0 !important;
@@ -140,7 +139,7 @@ $color-progress-bar-color: #444444;
   border: none;
   border-radius: $length-input-border-radius !important;
   margin-bottom: 20px !important;
-  color: $color-main-text-color !important;
+  color: $color-palette-neutral-body-text !important;
 }
 
 .saveAndResume {
@@ -391,7 +390,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 /*SECTIONS*/
 .wFormContainer fieldset {
   margin: 1em 0 0.5em 0;
-  color: $color-main-text-color !important;
+  color: $color-palette-neutral-body-text !important;
   border: none;
 }
 
@@ -408,11 +407,11 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 .wFormContainer .group > .label {
   margin-top: 1em;
-  color: $color-main-text-color;
+  // color: $color-palette-neutral-body-text;
 }
 
 .htmlSection .htmlContent span {
-  color: $color-main-text-color !important;
+  // color: $color-palette-neutral-body-text !important;
   // font-family: $font-typeface !important;
   font-size: 100% !important;
   line-height: auto;
@@ -420,7 +419,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 }
 
 .htmlSection .htmlContent {
-  color: $color-main-text-color !important;
+  // color: $color-palette-neutral-body-text !important;
   // font-family: $font-typeface !important;
   font-size: 100% !important;
   line-height: auto;
@@ -428,7 +427,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 .wFormContainer fieldset > fieldset:last-child {
   margin-bottom: 0;
-  color: $color-main-text-color;
+  // color: $color-palette-neutral-body-text;
 }
 
 .wFormContainer .pageSection > *:not([type="hidden"]):last-child {
@@ -454,13 +453,13 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   height: 2em;
   padding: .25em;
   vertical-align: middle;
-  color: $color-main-text-color !important;
+  // color: $color-palette-neutral-body-text !important;
 }
 
 .wFormContainer table.matrixLayout tbody tr th.headerCol,
 .wFormContainer table.gridLayout tbody tr th.headerCol {
   height: 2em;
-  color: $color-main-text-color !important;
+  // color: $color-palette-neutral-body-text !important;
 }
 
 .wFormContainer table.matrixLayout tbody tr:nth-child(odd),
@@ -534,12 +533,12 @@ table {
 .wFormContainer .label {
   font-weight: 400;
   font-family: $font-typeface;
-  color: $color-main-text-color;
+  // color: $color-palette-neutral-body-text;
 }
 
 .wFormContainer .label.preField {
   line-height: auto;
-  color: $color-main-text-color;
+  // color: $color-palette-neutral-body-text;
 }
 
 .wFormContainer .oneChoice {
@@ -548,7 +547,7 @@ table {
 
 .wFormContainer .oneChoice .label.postField {
   vertical-align: middle !important;
-  color: $color-main-text-color;
+  // color: $color-palette-neutral-body-text;
 }
 
 .wFormContainer .reqMark:after {
@@ -556,7 +555,7 @@ table {
 }
 
 .oneField .label span {
-  color: $color-main-text-color !important;
+  // color: $color-palette-neutral-body-text !important;
   // font-family: $font-typeface !important;
   font-size: 100% !important;
 }
@@ -609,7 +608,7 @@ table {
 .wFormContainer .wForm .inputWrapper input[type='file'] {
   border: none !important;
   background: transparent !important;
-  color: $color-main-text-color !important;
+  // color: $color-palette-neutral-body-text !important;
   max-width: 100%;
 }
 
@@ -937,7 +936,7 @@ html .kalendae .k-calendar .k-title, html .kalendae .k-calendar .k-header, html 
   width: 100%;
   height: auto;
   margin: 0;
-  color: $color-main-text-color;
+  // color: $color-palette-neutral-body-text;
 }
 
 html .kalendae .k-calendar .k-header span,
@@ -978,12 +977,12 @@ html .kalendae .k-calendar .k-btn-next-year:hover {
 }
 
 html .kalendae .k-calendar .k-header span {
-  color: $color-main-text-color;
+  // color: $color-palette-neutral-body-text;
   margin: 5px auto;
 }
 
 html .kalendae .k-calendar .k-days span.k-in-month {
-  color: $color-main-text-color;
+  // color: $color-palette-neutral-body-text;
   border-color: rgba(0, 0, 0, 0.1);
   background-color: $color-palette-neutral-light-background;
   height: 30px;
@@ -1003,7 +1002,7 @@ html .kalendae .k-calendar .k-days span.k-in-month.k-active {
 }
 
 html .kalendae .k-calendar .k-days span.k-out-of-month {
-  color: $color-main-text-color;
+  // color: $color-palette-neutral-body-text;
   background-color: rgba(0, 0, 0, 0);
   height: 30px;
   padding-top: 5px;
