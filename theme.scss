@@ -12,7 +12,6 @@ $length-logo-size: 144px;
 $select-logo-position_left_center_right: left;
 
 /*FORM*/
-$color-form-border-color: #eeeeee;
 $color-fieldset-border-color: #444444;
 /*Fieldset Border---DONE*/
 /*Input border on focus----DONE*/
@@ -98,7 +97,7 @@ $color-progress-bar-color: #444444;
 .wFormContainer .wForm {
   background-color: $color-background-color;
   color: $color-main-text-color;
-  border: 1px solid $color-form-border-color;
+  border: none;
   border-radius: .2rem;
   padding: 0 !important;
   margin-top: 1em;
@@ -126,7 +125,7 @@ $color-progress-bar-color: #444444;
 .reviewFooter {
   padding: 20px !important;
   background-color: $color-background-color !important;
-  border: 1px solid $color-form-border-color !important;
+  border: none;
   border-radius: $length-input-border-radius !important;
   margin-bottom: 20px !important;
   color: $color-main-text-color !important;
@@ -385,8 +384,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 .wFormContainer fieldset {
   margin: 1em 0 0.5em 0;
   color: $color-main-text-color !important;
-  border: 1px solid $color-fieldset-border-color !important;
-  border-radius: $length-input-border-radius;
+  border: none;
 }
 
 .wFormContainer fieldset.highlighted {
