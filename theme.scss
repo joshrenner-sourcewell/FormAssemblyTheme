@@ -46,8 +46,6 @@ $color-input-background-color: $color-palette-white;
 
 /*BUTTONS*/
 $length-button-border-radius: 0.7rem;
-$color-button-text-color: $color-palette-neutral-light-background;
-$color-button-background-color: $color-palette-active-link;
 $color-button-hover-text-color: $color-palette-white;
 $color-button-hover-background-color: $color-palette-active-hover;
 $length-button-padding-y: 15px;
@@ -112,8 +110,8 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
     .primaryAction,
     .wfPageNextButton {
       border-radius: $length-button-border-radius;
-      background-color: $color-button-background-color;
-      color: $color-button-text-color;
+      background-color: $color-palette-active-link !important;
+      color: $color-palette-neutral-light-background !important;
       margin-top: 1.6em;
       padding: $length-button-padding-y $length-button-padding-x;
       border: none;
@@ -467,9 +465,8 @@ table {
 }
 
 .wFormContainer .wForm .inputWrapper input[type='file']::-webkit-file-upload-button {
-  color: $color-button-text-color !important;
-  color: $color-button-text-color !important;
-  background-color: $color-button-background-color !important;
+  color: $color-palette-neutral-light-background !important;
+  background-color: $color-palette-active-link !important;
   border-radius: $length-input-border-radius !important;
   -webkit-appearance: none !important;
   border: none !important;
