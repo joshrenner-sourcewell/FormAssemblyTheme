@@ -264,80 +264,6 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   padding: 1rem !important;
 }
 
-
-/*NAVIGATION*/
-.wFormContainer .wForm #wfTabNav {
-  padding: 1rem 3rem 0 3rem;
-  font-size: 16px;
-}
-
-.wFormContainer .wfTab {
-  margin: 0 .1em;
-  padding: 5px 10px;
-  background-color: $color-btn-background-color;
-  border-radius: $length-input-border-radius;
-  color: $color-btn-text-color;
-  text-align: center;
-}
-
-.wFormContainer .wfTab:hover {
-  margin: 0 .1em;
-  padding: 5px 10px;
-  background-color: $color-btn-hover-background-color;
-  border-radius: $length-input-border-radius;
-  color: $color-btn-hover-text-color;
-  text-align: center;
-}
-
-.wFormContainer .wfTabSep {
-  display: none;
-}
-
-.wFormContainer .wfTab.wfTabCurrentPage {
-  font-weight: 700;
-  background-color: $color-btn-text-color;
-  color: $color-btn-background-color;
-}
-
-.wFormContainer .wfTab.wfHiddenTab, .wFormContainer .wfTab.wfHiddenTab:hover {
-  opacity: .5;
-  cursor: not-allowed;
-}
-
-@media only screen and (max-width: 600px) {
-
-  .wFormContainer .wForm #wfTabNav {
-    padding: 1rem 1rem 0 1rem;
-    font-size: 12px;
-  }
-
-  .wFormContainer .wfTab {
-    margin: 0 .1em .2em .1em;
-    padding: 5px 5px;
-
-  }
-
-  .wFormContainer .wfTab:hover {
-    margin: 0 .1em .2em .1em;
-    padding: 5px 5px;
-  }
-}
-
-
-/*Mobile Navigation in FB Canvas & Preview*/
-
-#preview .mobile .wfTabNav {
-  padding: 1rem 1rem 0 1rem;
-  font-size: 12px;
-}
-
-#preview .mobile .wTab,
-#preview .mobile .wTab:hover {
-  margin: 0 .1em .2em .1em;
-  padding: 5px 5px;
-}
-
-
 /*SECTIONS*/
 .wFormContainer fieldset {
   margin: 1em 0 0.5em 0;
@@ -940,12 +866,6 @@ html .kalendae .k-calendar .k-days span.k-active:hover {
 .wfTab.errMsg {
   border: 1px solid $color-palette-error !important;
   background-color: $color-palette-neutral-light-background;
-}
-
-.wfTab.wfTabCurrentPage.errMsg,
-.wfTab.errMsg:hover {
-  border: 1px solid $color-palette-error !important;
-  background-color: $color-palette-error !important;
 }
 
 .errorMessage {
