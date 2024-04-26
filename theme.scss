@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
+$font-typeface: 'Source Sans Pro';
+
 /*LOGO*/
 $image-logo-image: '//sourcewellmn.tfaforms.net/forms/get_image/4/1HYcZSd4rq06hqBDxF1psuoaeEGfX2lWAYiCrP5MI7Ju8KmPUPpU21ixtauUmuw6-Sourcewell_logo1.jpg';
 $length-logo-height: 144px;
@@ -29,7 +31,6 @@ $color-fieldset-border-color: #444444;
 
 
 /*TYPOGRAPHY*/
-$font-main-font: 'Source Sans Pro', Calibri, sans-serif;
 $length-title-font-size: 50px;
 $font-section-title-font: $font-main-font;
 $length-section-title-font-size: 20px;
@@ -49,7 +50,7 @@ $color-read-only-background-color: #eeeeee;
 $color-read-only-border-color: #cccccc;
 
 /*BUTTONS*/
-$font-btn-font: $font-main-font;
+$font-btn-font: $font-typeface;
 $length-btn-font-size: 20px;
 $color-btn-text-color: #dddddd;
 $color-btn-background-color: #444444;
@@ -65,7 +66,7 @@ $color-progress-bar-color: #444444;
 /*---------------------*/
 
 .wFormContainer {
-  font-family: $font-main-font;
+  font-family: $font-typeface;
   font-size: $length-main-text-size;
 }
 
@@ -272,7 +273,6 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 }
 
 .wFormContainer .wForm .wFormTitle {
-  font-family: $font-main-font;
   padding: 1.75rem 3rem !important;
   margin: 0;
   font-size: $length-title-font-size;
@@ -423,7 +423,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 .htmlSection .htmlContent span {
   color: $color-main-text-color !important;
-  font-family: $font-main-font !important;
+  // font-family: $font-typeface !important;
   font-size: 100% !important;
   line-height: auto;
 
@@ -431,7 +431,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 .htmlSection .htmlContent {
   color: $color-main-text-color !important;
-  font-family: $font-main-font !important;
+  // font-family: $font-typeface !important;
   font-size: 100% !important;
   line-height: auto;
 }
@@ -543,7 +543,7 @@ table {
 
 .wFormContainer .label {
   font-weight: 400;
-  font-family: $font-main-font;
+  font-family: $font-typeface;
   color: $color-main-text-color;
 }
 
@@ -567,7 +567,7 @@ table {
 
 .oneField .label span {
   color: $color-main-text-color !important;
-  font-family: $font-main-font !important;
+  // font-family: $font-typeface !important;
   font-size: 100% !important;
 }
 
@@ -913,7 +913,7 @@ html .kalendae {
   background: $color-palette-neutral-light-background;
   border: 2px solid $color-palette-neutral-60-steel-blue !important;
   font-size: 100%;
-  font-family: $font-main-font;
+  font-family: $font-typeface;
   border-radius: $length-input-border-radius;
   padding: 1rem;
   /** Container for the 1-month view **/
