@@ -112,14 +112,29 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
       }
     }
 
-    input[type="submit"] {
-      background-color: $color-button-background-color;
+    input[type="submit"],
+    .primaryAction,
+    .wfPageNextButton {
       border-radius: $length-button-border-radius;
+      background-color: $color-button-background-color;
       color: $color-button-text-color;
+      margin-top: 1.6em;
+      padding: $length-button-padding-y $length-button-padding-x;
+      border: none;
       font: $text-type-body-1 $font-type-font;
+      font-weight: bold;
+      -webkit-appearance: none;
+
       &:hover {
         color: $color-button-hover-text-color;
         background-color: $color-button-hover-background-color;
+      }
+
+      &:disabled {
+        color: $color-palette-neutral-30-steel-blue;
+        -webkit-appearance: none;
+        border-radius: $length-button-border-radius;
+        cursor: not-allowed;
       }
     }
   }
@@ -127,6 +142,7 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
   .htmlSection {
     margin: 1em auto;
   }
+
   .wFormHelp {
     padding: 20px 30px !important;
     min-height: 110px !important;
@@ -879,93 +895,6 @@ a.errMsg {
 
 .wFormContainer .errMsg {
   color: $color-palette-error !important;
-}
-
-/*BUTTONS*/
-
-
-.wFormContainer {
-  /* Container for the submit button */
-  /* Container for the page next/previous buttons */
-}
-
-.wFormContainer .actions {
-  margin-top: 0;
-  /* required to preserve alignment of previous/next and submit buttons. */
-  /* Submit button */
-  /* Hover state */
-  /* Disabled state (submission in progress) */
-}
-
-.wFormContainer .actions .primaryAction {
-  background-color: $color-button-background-color;
-  color: $color-button-text-color;
-  margin-top: 1.6em;
-  padding: $length-button-padding-y $length-button-padding-x;
-  border: none;
-  font: $text-type-body-1 $font-type-font;
-  font-weight: bold;
-  -webkit-appearance: none;
-  border-radius: $length-input-border-radius;
-}
-
-.wFormContainer .actions .primaryAction:hover {
-  background-color: $color-button-hover-background-color;
-  color: $color-button-hover-text-color;
-}
-
-.wFormContainer .actions .primaryAction:disabled {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: rgba(255, 255, 255, 0.7);
-  -webkit-appearance: none;
-  border-radius: $length-input-border-radius;
-  cursor: not-allowed;
-}
-
-.wFormContainer .wfPagingButtons {
-  margin-top: 0;
-  /* Page next/previous buttons */
-  /* Hover state */
-}
-
-.wFormContainer .wfPagingButtons .wfPageNextButton,
-.wFormContainer .wfPagingButtons .wfPagePreviousButton {
-  background-color: $color-button-background-color;
-  color: $color-button-text-color;
-  margin-top: 1.6em;
-  padding: $length-button-padding-y $length-button-padding-x;
-  border: none;
-  font: $text-type-body-1 $font-type-font;
-  -webkit-appearance: none;
-  border-radius: $length-input-border-radius;
-}
-
-.wFormContainer .wfPagingButtons .wfPageNextButton:hover,
-.wFormContainer .wfPagingButtons .wfPagePreviousButton:hover {
-  background-color: $color-button-hover-background-color;
-  color: $color-button-hover-text-color;
-}
-
-
-@media only screen and (max-width: 600px) {
-
-  .wFormContainer .actions .primaryAction,
-  .wFormContainer .wfPagingButtons .wfPageNextButton,
-  .wFormContainer .wfPagingButtons .wfPagePreviousButton {
-    min-width: 150px;
-    font-size: 16px;
-    padding: $length-button-padding-y 20px;
-  }
-}
-
-/* Mobile Buttons in FB Canvas and Preview */
-
-#preview .mobile .primaryAction,
-#preview .mobile .wfPageNextButton,
-#preview .mobile .wfPagePreviousButton {
-  min-width: 150px;
-  font-size: 16px;
-  padding: $length-button-padding-y 20px;
 }
 
 /* Footer */
