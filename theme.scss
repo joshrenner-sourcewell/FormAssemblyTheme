@@ -45,8 +45,8 @@ $length-input-border-radius: 0.25rem;
 $color-input-background-color: $color-palette-white;
 
 /*BUTTONS*/
-$font-btn-font: $font-type-font;
-$length-btn-font-size: 20px;
+$length-button-border-radius: 0.7rem;
+
 $color-btn-text-color: #dddddd;
 $color-btn-background-color: #444444;
 $color-btn-hover-text-color: #ffffff;
@@ -59,6 +59,10 @@ $color-progress-bar-text-color: #dddddd;
 $color-progress-bar-color: #444444;
 
 /*---------------------*/
+/*Combatting some phantom BS*/
+body:not(.drag) #preview .hover:not(.selected):not(tr):before {
+  display: none !important;
+}
 
 .wFormContainer {
   .wForm {
@@ -90,20 +94,36 @@ $color-progress-bar-color: #444444;
     h3 {
       font: $text-type-head-3 $font-type-font;
     }
+
     h4,
     legend,
     .group > .label.preField {
       font: $text-type-head-4 $font-type-font;
     }
-    a, :link {
+
+    a, 
+    :link,
+    input[type="button"] {
       text-decoration: $text-type-link-decoration;
       color: $color-palette-active-link;
+      background: none;
       &:hover {
         text-decoration: $text-type-link-hover-decoration;
         color: $color-palette-active-hover;
       }
     }
+
+    input[type="submit"] {
+      background-color: $color-palette-active-link;
+      border-radius: $length-button-border-radius;
+      color: $color-palette-neutral-light-background;
+      font: $text-type-body-1 $font-type-font;
+      &:hover {
+        background-color: $color-palette-active-hover;
+      }
+    }
   }
+
   .htmlSection {
     margin: 1em auto;
   }
@@ -963,9 +983,8 @@ a.errMsg {
   margin-top: 1.6em;
   padding: $length-btn-padding-top-bottom $length-btn-padding-left-right;
   border: none;
-  font-size: $length-btn-font-size;
+  font: $text-type-body-1 $font-type-font;
   font-weight: bold;
-  font-family: $font-btn-font;
   -webkit-appearance: none;
   border-radius: $length-input-border-radius;
 }
@@ -996,8 +1015,7 @@ a.errMsg {
   margin-top: 1.6em;
   padding: $length-btn-padding-top-bottom $length-btn-padding-left-right;
   border: none;
-  font-size: $length-btn-font-size;
-  font-family: $font-btn-font;
+  font: $text-type-body-1 $font-type-font;
   -webkit-appearance: none;
   border-radius: $length-input-border-radius;
 }
