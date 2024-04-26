@@ -1,5 +1,5 @@
 /*FONT*/
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 /*LOGO*/
@@ -34,6 +34,9 @@ $text-type-head-4: 600 24px/36px;
 $text-type-head-3: 400 28px/38px;
 $text-type-head-2: 300 42px/48px;
 $text-type-head-1: 300 50px/60px;
+$text-type-link-decoration: none;
+$text-type-link-hover-decoration: underline;
+
 $length-type-body-size: 18px;
 $length-type-h1-size: 50px;
 $length-title-font-size: 50px;
@@ -99,10 +102,10 @@ $color-progress-bar-color: #444444;
       font: $text-type-head-4 $font-type-font;
     }
     a, :link {
-      text-decoration: none;
+      text-decoration: $text-type-link-decoration;
       color: $color-palette-active-link;
       &:hover {
-        text-decoration: underline;
+        text-decoration: $text-type-link-hover-decoration;
         color: $color-palette-active-hover;
       }
     }
