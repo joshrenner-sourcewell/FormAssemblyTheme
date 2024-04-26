@@ -59,10 +59,10 @@ $color-progress-bar-color: #444444;
 /*---------------------*/
 
 .wFormContainer {
-  .htmlSection {
-    margin: 1em auto;
-  }
   .wForm {
+    display: flex;
+    /* prevents margin collapse on form title */
+    flex-direction: column;
     padding: 0 !important;
     margin-top: 1em;
     border: none;
@@ -75,7 +75,8 @@ $color-progress-bar-color: #444444;
     .wFormTitle {
       font: 300 50px/60px $font-base-font;
     }
-    h2 {
+    h2,
+    .section.pageSection > h4 {
       font: 300 42px/48px $font-base-font;
     }
     h3 {
@@ -98,14 +99,16 @@ $color-progress-bar-color: #444444;
       padding: 0 3rem 2rem 3rem;
     }
   }
+  .htmlSection {
+    margin: 1em auto;
+  }
+  .wFormHelp {
+    padding: 20px 30px !important;
+    min-height: 110px !important;
+  }
 }
 
 .wFormThankYou {
-  padding: 20px 30px !important;
-  min-height: 110px !important;
-}
-
-.wFormContainer .wFormHelp {
   padding: 20px 30px !important;
   min-height: 110px !important;
 }
@@ -192,13 +195,13 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 @media only screen and (max-width: 600px) {
   .wFormWebPage {
     margin: 0 !important;
-  }
-  .wFormWebPage .wForm {
-    border-radius: 0;
-    padding: 0 !important;
-  }
-  .wFormWebPage .wForm form {
-    padding: 0 1rem 2rem 1rem;
+    .wForm {
+      border-radius: 0;
+      padding: 0 !important;
+      form {
+        padding: 0 1rem 2rem 1rem;
+      }
+    }
   }
 }
 
@@ -209,11 +212,6 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 
 /*HEADER AND LOGO*/
-
-/* Main container. Must wrap *all* theme CSS */
-.wFormContainer {
-  /* Header and logo placeholder. */
-}
 
 .wFormContainer .wFormHeader {
   height: $length-logo-height;
@@ -234,9 +232,6 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 /* Main container. Must wrap *all* theme CSS */
 .wFormContainer .wForm {
-  display: flex;
-  /* prevents margin collapse on form title */
-  flex-direction: column;
   .wFormTitle {
     padding: 1.75rem 3rem !important;
     margin: 0;
@@ -245,7 +240,6 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   }
   .section.pageSection > h4 {
     font-size: $length-section-title-font-size;
-    color: $color-palette-primary-steel-blue;
   }
 }
 
