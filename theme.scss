@@ -23,13 +23,6 @@ $color-palette-active-button: #027ABB;
 $color-palette-active-hover: #06669D;
 $color-palette-active-link: #027ABB;
 
-/*----------------------*/
-/*FORM*/
-$color-fieldset-border-color: #444444;
-/*Fieldset Border---DONE*/
-/*Input border on focus----DONE*/
-
-
 /*TYPOGRAPHY*/
 $length-title-font-size: 50px;
 $length-section-title-font-size: 20px;
@@ -185,7 +178,7 @@ input[type='password']#password {
 input[type='text'].validate-email:focus,
 input[type='password']#password:focus {
   outline-style: none;
-  border: 2px solid $color-fieldset-border-color !important;
+  border: 2px solid $color-palette-primary-steel-blue !important;
   color: $color-input-text-color;
 }
 
@@ -404,7 +397,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 .wFormContainer fieldset.highlighted {
   border: double !important;
-  border-color: $color-fieldset-border-color !important;
+  border-color: $color-palette-primary-steel-blue !important;
 }
 
 .wFormContainer fieldset legend {
@@ -672,7 +665,7 @@ table {
 .wFormContainer .wForm .inputWrapper select:focus,
 .wFormContainer .wForm .inputWrapper select.required:focus {
   outline-style: none;
-  border: 2px solid $color-fieldset-border-color !important;
+  border: 2px solid $color-palette-primary-steel-blue !important;
   color: $color-input-text-color;
 }
 
