@@ -24,15 +24,19 @@ $color-palette-active-hover: #06669D;
 $color-palette-active-link: #027ABB;
 
 $color-palette-error: #FF020B;
+$color-palette-white: #ffffff;
 
 /*TYPOGRAPHY*/
 $length-title-font-size: 50px;
 $length-section-title-font-size: 20px;
 $length-main-text-size: 16px;
 
+/*FORM*/
+$color-form-background-color: $color-palette-white;
+
 /*INPUTS*/
 $length-input-border-radius: 0.25rem;
-$color-input-background-color: #FFF;
+$color-input-background-color: $color-palette-white;
 $color-read-only-text-color: #444444;
 $color-read-only-background-color: #eeeeee;
 $color-read-only-border-color: #cccccc;
@@ -103,7 +107,7 @@ $color-progress-bar-color: #444444;
 }
 
 .wFormContainer .wForm {
-  background-color: $color-palette-neutral-light-background;
+  background-color: $color-form-background-color;
   color: $color-palette-neutral-body-text;
   border: none;
   border-radius: .2rem;
@@ -204,7 +208,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 /* Optional - Apply for FormAssembly hosted forms only. */
 .wFormWebPage {
-  background-color: $color-palette-neutral-light-background;
+  background-color: $color-form-background-color;
 }
 
 @media only screen and (max-width: 600px) {
@@ -866,7 +870,6 @@ html {
 }
 
 html .kalendae {
-  background: $color-palette-neutral-light-background;
   border: 2px solid $color-palette-neutral-60-steel-blue !important;
   font-size: 100%;
   font-family: $font-typeface;
@@ -951,7 +954,6 @@ html .kalendae .k-calendar .k-header span {
 html .kalendae .k-calendar .k-days span.k-in-month {
   // color: $color-palette-neutral-body-text;
   border-color: rgba(0, 0, 0, 0.1);
-  background-color: $color-palette-neutral-light-background;
   height: 30px;
   padding-top: 5px;
   margin-bottom: 5px;
@@ -1022,7 +1024,6 @@ html .kalendae .k-calendar .k-days span.k-active:hover {
 .wfTab.errMsg:hover {
   border: 1px solid $color-palette-error !important;
   background-color: $color-palette-error !important;
-  color: $color-palette-neutral-light-background !important;
 }
 
 .errorMessage {
