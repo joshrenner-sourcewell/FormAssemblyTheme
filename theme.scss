@@ -46,13 +46,12 @@ $color-input-background-color: $color-palette-white;
 
 /*BUTTONS*/
 $length-button-border-radius: 0.7rem;
-
-$color-btn-text-color: #dddddd;
-$color-btn-background-color: #444444;
-$color-btn-hover-text-color: #ffffff;
-$color-btn-hover-background-color: #666666;
-$length-btn-padding-top-bottom: 15px;
-$length-btn-padding-left-right: 45px;
+$color-button-text-color: $color-palette-neutral-light-background;
+$color-button-background-color: $color-palette-active-link;
+$color-button-hover-text-color: $color-palette-white;
+$color-button-hover-background-color: $color-palette-active-hover;
+$length-button-padding-y: 15px;
+$length-button-padding-x: 45px;
 
 /*PROGRESS BAR*/
 $color-progress-bar-text-color: #dddddd;
@@ -114,12 +113,13 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
     }
 
     input[type="submit"] {
-      background-color: $color-palette-active-link;
+      background-color: $color-button-background-color;
       border-radius: $length-button-border-radius;
-      color: $color-palette-neutral-light-background;
+      color: $color-button-text-color;
       font: $text-type-body-1 $font-type-font;
       &:hover {
-        background-color: $color-palette-active-hover;
+        color: $color-button-hover-text-color;
+        background-color: $color-button-hover-background-color;
       }
     }
   }
@@ -470,9 +470,9 @@ table {
 }
 
 .wFormContainer .wForm .inputWrapper input[type='file']::-webkit-file-upload-button {
-  color: $color-btn-text-color !important;
-  color: $color-btn-text-color !important;
-  background-color: $color-btn-background-color !important;
+  color: $color-button-text-color !important;
+  color: $color-button-text-color !important;
+  background-color: $color-button-background-color !important;
   border-radius: $length-input-border-radius !important;
   -webkit-appearance: none !important;
   border: none !important;
@@ -481,8 +481,8 @@ table {
 
 
 .wFormContainer .wForm .inputWrapper input[type='file']::-webkit-file-upload-button:hover {
-  color: $color-btn-hover-text-color !important;
-  background-color: $color-btn-hover-background-color !important;
+  color: $color-button-hover-text-color !important;
+  background-color: $color-button-hover-background-color !important;
 }
 
 .wFormContainer .wForm .inputWrapper textarea {
@@ -809,9 +809,9 @@ html .kalendae .k-calendar .k-days span.k-in-month {
 }
 
 html .kalendae .k-calendar .k-days span.k-in-month.k-active {
-  color: $color-btn-text-color;
+  color: $color-button-text-color;
   border-color: rgba(0, 0, 0, 0.1);
-  background-color: $color-btn-background-color;
+  background-color: $color-button-background-color;
   height: 30px;
   padding-top: 5px;
   margin-bottom: 5px;
@@ -828,8 +828,8 @@ html .kalendae .k-calendar .k-days span.k-out-of-month {
 }
 
 html .kalendae .k-calendar .k-days span.k-selected.k-active {
-  background: $color-btn-background-color;
-  color: $color-btn-text-color;
+  background: $color-button-background-color;
+  color: $color-button-text-color;
   opacity: 1;
 }
 
@@ -898,10 +898,10 @@ a.errMsg {
 }
 
 .wFormContainer .actions .primaryAction {
-  background-color: $color-btn-background-color;
-  color: $color-btn-text-color;
+  background-color: $color-button-background-color;
+  color: $color-button-text-color;
   margin-top: 1.6em;
-  padding: $length-btn-padding-top-bottom $length-btn-padding-left-right;
+  padding: $length-button-padding-y $length-button-padding-x;
   border: none;
   font: $text-type-body-1 $font-type-font;
   font-weight: bold;
@@ -910,8 +910,8 @@ a.errMsg {
 }
 
 .wFormContainer .actions .primaryAction:hover {
-  background-color: $color-btn-hover-background-color;
-  color: $color-btn-hover-text-color;
+  background-color: $color-button-hover-background-color;
+  color: $color-button-hover-text-color;
 }
 
 .wFormContainer .actions .primaryAction:disabled {
@@ -930,10 +930,10 @@ a.errMsg {
 
 .wFormContainer .wfPagingButtons .wfPageNextButton,
 .wFormContainer .wfPagingButtons .wfPagePreviousButton {
-  background-color: $color-btn-background-color;
-  color: $color-btn-text-color;
+  background-color: $color-button-background-color;
+  color: $color-button-text-color;
   margin-top: 1.6em;
-  padding: $length-btn-padding-top-bottom $length-btn-padding-left-right;
+  padding: $length-button-padding-y $length-button-padding-x;
   border: none;
   font: $text-type-body-1 $font-type-font;
   -webkit-appearance: none;
@@ -942,8 +942,8 @@ a.errMsg {
 
 .wFormContainer .wfPagingButtons .wfPageNextButton:hover,
 .wFormContainer .wfPagingButtons .wfPagePreviousButton:hover {
-  background-color: $color-btn-hover-background-color;
-  color: $color-btn-hover-text-color;
+  background-color: $color-button-hover-background-color;
+  color: $color-button-hover-text-color;
 }
 
 
@@ -954,7 +954,7 @@ a.errMsg {
   .wFormContainer .wfPagingButtons .wfPagePreviousButton {
     min-width: 150px;
     font-size: 16px;
-    padding: $length-btn-padding-top-bottom 20px;
+    padding: $length-button-padding-y 20px;
   }
 }
 
@@ -965,7 +965,7 @@ a.errMsg {
 #preview .mobile .wfPagePreviousButton {
   min-width: 150px;
   font-size: 16px;
-  padding: $length-btn-padding-top-bottom 20px;
+  padding: $length-button-padding-y 20px;
 }
 
 /* Footer */
