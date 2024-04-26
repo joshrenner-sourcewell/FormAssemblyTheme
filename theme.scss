@@ -3,15 +3,15 @@
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 /*----------------------*/
+/*COLOR*/
+$color-background-color: #ffffff;
+
 /*LOGO*/
 $image-logo-image: '//sourcewellmn.tfaforms.net/forms/get_image/4/1HYcZSd4rq06hqBDxF1psuoaeEGfX2lWAYiCrP5MI7Ju8KmPUPpU21ixtauUmuw6-Sourcewell_logo1.jpg';
 $length-logo-size: 144px;
 $select-logo-position_left_center_right: left;
 
 /*FORM*/
-$color-background-color: #ffffff;
-$color-form-background-color: #ffffff;
-$color-form-header-background-color: #ffffff;
 $color-form-border-color: #eeeeee;
 $color-fieldset-border-color: #444444;
 /*Fieldset Border---DONE*/
@@ -97,7 +97,7 @@ $color-progress-bar-color: #444444;
 }
 
 .wFormContainer .wForm {
-  background-color: $color-form-background-color;
+  background-color: $color-background-color;
   color: $color-main-text-color;
   border: 1px solid $color-form-border-color;
   border-radius: .2rem;
@@ -126,7 +126,7 @@ $color-progress-bar-color: #444444;
 .reviewResponse,
 .reviewFooter {
   padding: 20px !important;
-  background-color: $color-form-background-color !important;
+  background-color: $color-background-color !important;
   border: 1px solid $color-form-border-color !important;
   border-radius: $length-input-border-radius !important;
   margin-bottom: 20px !important;
@@ -259,7 +259,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   padding: 1.75rem 3rem !important;
   margin: 0;
   font-size: $length-title-font-size;
-  background-color: $color-form-header-background-color;
+  background-color: $color-background-color;
   color: $color-title-text-color;
 }
 
@@ -840,13 +840,13 @@ table {
 
 
 .wForm .field-hint-inactive .hint {
-  background-color: $color-form-background-color !important;
+  background-color: $color-background-color !important;
   color: $color-hint-text-color !important;
   opacity: 1 !important;
 }
 
 .wForm .hintsBelow .field-hint, .wform .hintsSide .field-hint {
-  background-color: $color-form-background-color !important;
+  background-color: $color-background-color !important;
   color: $color-hint-text-color !important;
   opacity: 1 !important;
 }
@@ -895,7 +895,7 @@ html {
 }
 
 html .kalendae {
-  background: $color-form-background-color;
+  background: $color-background-color;
   border: 2px solid $color-input-border-color !important;
   font-size: 100%;
   font-family: $font-main-font;
@@ -980,7 +980,7 @@ html .kalendae .k-calendar .k-header span {
 html .kalendae .k-calendar .k-days span.k-in-month {
   color: $color-main-text-color;
   border-color: rgba(0, 0, 0, 0.1);
-  background-color: $color-form-background-color;
+  background-color: $color-background-color;
   height: 30px;
   padding-top: 5px;
   margin-bottom: 5px;
@@ -1044,14 +1044,14 @@ html .kalendae .k-calendar .k-days span.k-active:hover {
 
 .wfTab.errMsg {
   border: 1px solid $color-error-color !important;
-  background-color: $color-form-background-color;
+  background-color: $color-background-color;
 }
 
 .wfTab.wfTabCurrentPage.errMsg,
 .wfTab.errMsg:hover {
   border: 1px solid $color-error-color !important;
   background-color: $color-error-color !important;
-  color: $color-form-background-color !important;
+  color: $color-background-color !important;
 }
 
 .errorMessage {
@@ -1166,11 +1166,11 @@ a.errMsg {
 }
 
 .wFormContainer .wFormFooter .supportInfo a {
-  color: $color-form-header-background-color;
+  color: $color-background-color;
 }
 
 .wFormContainer .wFormFooter .supportInfo a:hover {
-  color: $color-form-header-background-color;
+  color: $color-background-color;
 }
 
 .wFormContainer .oneField, .wFormContainer .section {
