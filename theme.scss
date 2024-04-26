@@ -32,7 +32,6 @@ $color-fieldset-border-color: #444444;
 
 /*TYPOGRAPHY*/
 $length-title-font-size: 50px;
-$font-section-title-font: $font-main-font;
 $length-section-title-font-size: 20px;
 $length-main-text-size: 16px;
 $color-main-text-color: #444444;
@@ -204,7 +203,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   font-weight: 900;
   font-size: $length-section-title-font-size !important;
   color: $color-palette-primary-steel-blue !important;
-  font-family: $font-section-title-font !important;
+  font-family: $font-typeface !important;
 }
 
 .wForm .fa-search.tt-search,
@@ -282,19 +281,17 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 .wFormContainer .wForm .section.pageSection > h4 {
   font-size: $length-section-title-font-size;
   color: $color-palette-primary-steel-blue;
-  font-family: $font-section-title-font;
 }
 
 .wFormContainer .wForm .htmlSection h4 {
   font-size: $length-section-title-font-size;
   color: $color-palette-primary-steel-blue;
-  font-family: $font-section-title-font;
 }
 
 .wForm div.section > .preField {
   font-size: $length-section-title-font-size !important;
   color: $color-palette-primary-steel-blue !important;
-  font-family: $font-section-title-font !important;
+  font-family: $font-typeface !important;
 }
 
 /*Mobile Canvas & Preview in FB*/
@@ -413,7 +410,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 .wFormContainer fieldset legend {
   font-size: $length-section-title-font-size !important;
   color: $color-palette-primary-steel-blue !important;
-  font-family: $font-section-title-font !important;
+  font-family: $font-typeface !important;
 }
 
 .wFormContainer .group > .label {
