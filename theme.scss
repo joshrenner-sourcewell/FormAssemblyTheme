@@ -27,7 +27,6 @@ $color-palette-active-link: #027ABB;
 $length-title-font-size: 50px;
 $length-section-title-font-size: 20px;
 $length-main-text-size: 16px;
-$color-link-text-color: #005eff;
 $color-hint-text-color: #444444;
 $color-error-color: #ff0126;
 
@@ -63,17 +62,17 @@ $color-progress-bar-color: #444444;
 
 .wFormContainer a {
   text-decoration: none;
-  color: $color-link-text-color;
+  color: $color-palette-active-link;
 }
 
 .wFormContainer a:hover {
   text-decoration: underline;
-  color: $color-link-text-color;
+  color: $color-palette-active-hover;
 }
 
 .wForm :link {
   text-decoration: none;
-  color: $color-link-text-color;
+  color: $color-palette-active-link;
 }
 
 .wFormContainer .htmlSection {
