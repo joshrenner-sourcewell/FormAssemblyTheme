@@ -1,8 +1,6 @@
 /*FONT*/
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-
-$font-base-font: 'Source Sans Pro';
 
 /*LOGO*/
 $image-logo-image: '//sourcewellmn.tfaforms.net/forms/get_image/4/1HYcZSd4rq06hqBDxF1psuoaeEGfX2lWAYiCrP5MI7Ju8KmPUPpU21ixtauUmuw6-Sourcewell_logo1.jpg';
@@ -27,6 +25,15 @@ $color-palette-error: #FF020B;
 $color-palette-white: #ffffff;
 
 /*TYPOGRAPHY*/
+$font-type-font: 'Source Sans Pro';
+$text-type-body-4: 400 12px/18px;
+$text-type-body-3: 400 16px/24px;
+$text-type-body-2: 400 18px/30px;
+$text-type-body-1: 400 20px/32px;
+$text-type-head-4: 600 24px/36px;
+$text-type-head-3: 400 28px/38px;
+$text-type-head-2: 300 42px/48px;
+$text-type-head-1: 300 50px/60px;
 $length-type-body-size: 18px;
 $length-type-h1-size: 50px;
 $length-title-font-size: 50px;
@@ -43,7 +50,7 @@ $color-read-only-background-color: #eeeeee;
 $color-read-only-border-color: #cccccc;
 
 /*BUTTONS*/
-$font-btn-font: $font-base-font;
+$font-btn-font: $font-type-font;
 $length-btn-font-size: 20px;
 $color-btn-text-color: #dddddd;
 $color-btn-background-color: #444444;
@@ -66,26 +73,30 @@ $color-progress-bar-color: #444444;
     padding: 0 !important;
     margin-top: 1em;
     border: none;
-    font: 500 $length-type-body-size/24px $font-base-font;
+    font: $text-type-body-3 $font-type-font;
     color: $color-palette-neutral-body-text;
+
     h1, h2, h3, h4, .wFormTitle {
       color: $color-palette-primary-steel-blue;
     }
+
     h1,
     .wFormTitle {
-      font: 300 50px/60px $font-base-font;
+      font: $text-type-head-1 $font-type-font;
     }
+
     h2,
     .section.pageSection > h4 {
-      font: 300 42px/48px $font-base-font;
+      font: $text-type-head-2 $font-type-font;
     }
+
     h3 {
-      font: 500 28px/38px $font-base-font;
+      font: $text-type-head-3 $font-type-font;
     }
     h4,
     legend,
     .group > .label.preField {
-      font: 600 24px/36px $font-base-font;
+      font: $text-type-head-4 $font-type-font;
     }
     a, :link {
       text-decoration: none;
@@ -131,7 +142,7 @@ $color-progress-bar-color: #444444;
 .saveAndResume input[type='text'],
 .saveAndResume input[type='password'],
 .required:not(.choices):not(select):not(.wfAutosuggest) {
-  font-family: $font-base-font !important;
+  font-family: $font-type-font !important;
   color: $color-palette-neutral-body-text !important;
   border: 1px solid $color-palette-neutral-60-steel-blue !important;
   border-radius: $length-input-border-radius !important;
@@ -177,7 +188,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   font-weight: 900;
   font-size: $length-section-title-font-size !important;
   color: $color-palette-primary-steel-blue !important;
-  font-family: $font-base-font !important;
+  font-family: $font-type-font !important;
 }
 
 .wForm .fa-search.tt-search,
@@ -252,7 +263,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 .wForm div.section > .preField {
   font-size: $length-section-title-font-size !important;
   color: $color-palette-primary-steel-blue !important;
-  font-family: $font-base-font !important;
+  font-family: $font-type-font !important;
 }
 
 /*Mobile Canvas & Preview in FB*/
@@ -371,7 +382,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 .wFormContainer fieldset legend {
   font-size: $length-section-title-font-size !important;
   color: $color-palette-primary-steel-blue !important;
-  font-family: $font-base-font !important;
+  font-family: $font-type-font !important;
 }
 
 .wFormContainer .group > .label {
@@ -493,7 +504,7 @@ table {
 
 .wFormContainer .label {
   font-weight: 400;
-  font-family: $font-base-font;
+  font-family: $font-type-font;
 }
 
 .wFormContainer .label.preField {
@@ -539,7 +550,7 @@ table {
 .wFormContainer .wForm .inputWrapper input[type='password'],
 .wFormContainer .wForm .inputWrapper select,
 .wFormContainer .wForm .inputWrapper textarea {
-  font-family: $font-base-font;
+  font-family: $font-type-font;
   color: $color-palette-neutral-body-text;
   border: 1px solid $color-palette-neutral-60-steel-blue;
   border-radius: $length-input-border-radius;
@@ -590,12 +601,12 @@ table {
 
 .wFormContainer .wForm .inputWrapper select option {
   padding: 0.25em .5rem;
-  font-family: $font-base-font;
+  font-family: $font-type-font;
 }
 
 .wFormContainer .wForm .inputWrapper input:not([type="file"]):not(.tt-hint):read-only,
 .wFormContainer .wForm .inputWrapper textarea:read-only {
-  font-family: $font-base-font;
+  font-family: $font-type-font;
   background-color: $color-read-only-background-color !important;
   border: 1px solid $color-read-only-border-color !important;
   color: $color-read-only-text-color !important;
@@ -603,7 +614,7 @@ table {
 
 .wFormContainer .wForm .inputWrapper input:not([type="file"]):not(.tt-hint):-moz-read-only,
 .wFormContainer .wForm .inputWrapper textarea:-moz-read-only {
-  font-family: $font-base-font;
+  font-family: $font-type-font;
   background-color: $color-read-only-background-color !important;
   border: 1px solid $color-read-only-border-color !important;
   color: $color-read-only-text-color !important;
@@ -826,7 +837,7 @@ table {
 }
 
 .tt-suggestion {
-  font-family: $font-base-font !important;
+  font-family: $font-type-font !important;
   font-size: $length-type-body-size !important;
   color: $color-palette-neutral-body-text !important;
 }
@@ -840,7 +851,7 @@ html {
 html .kalendae {
   border: 2px solid $color-palette-neutral-60-steel-blue !important;
   font-size: 100%;
-  font-family: $font-base-font;
+  font-family: $font-type-font;
   border-radius: $length-input-border-radius;
   padding: 1rem;
   /** Container for the 1-month view **/
