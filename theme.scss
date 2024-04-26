@@ -27,14 +27,10 @@ $color-palette-error: #FF020B;
 $color-palette-white: #ffffff;
 
 /*TYPOGRAPHY*/
-$color-type-headline-color: $color-palette-primary-steel-blue;
-$color-type-body-color: $color-palette-neutral-body-text;
 $length-type-body-size: 18px;
-
-
+$length-type-h1-size: 50px;
 $length-title-font-size: 50px;
 $length-section-title-font-size: 20px;
-$length-main-text-size: 16px;
 
 /*FORM*/
 $color-form-background-color: $color-palette-white;
@@ -63,63 +59,46 @@ $color-progress-bar-color: #444444;
 /*---------------------*/
 
 .wFormContainer {
-  font-family: $font-base-font;
-  font-size: $length-type-body-size;
-  color: $color-type-body-color;
-  a, :link {
-    text-decoration: none;
-    color: $color-palette-active-link;
-    &:hover {
-      text-decoration: underline;
-      color: $color-palette-active-hover;
+  .htmlSection {
+    margin: 1em auto;
+  }
+  .wForm {
+    padding: 0 !important;
+    margin-top: 1em;
+    border: none;
+    font: 500 $length-type-body-size/24px $font-base-font;
+    color: $color-palette-neutral-body-text;
+    h1, h2, h3, h4, .wFormTitle {
+      color: $color-palette-primary-steel-blue;
+    }
+    h1,
+    .wFormTitle {
+      font: 300 50px/60px $font-base-font;
+    }
+    h2 {
+      font: 300 42px/48px $font-base-font;
+    }
+    h3 {
+      font: 500 28px/38px $font-base-font;
+    }
+    h4,
+    legend,
+    .group > .label.preField {
+      font: 600 24px/36px $font-base-font;
+    }
+    a, :link {
+      text-decoration: none;
+      color: $color-palette-active-link;
+      &:hover {
+        text-decoration: underline;
+        color: $color-palette-active-hover;
+      }
+    }
+    form {
+      padding: 0 3rem 2rem 3rem;
     }
   }
 }
-
-.wFormContainer .htmlSection {
-  margin: 1em auto;
-
-}
-
-/* FORM TYPOGRAPHY */
-.wForm .wFormTitle {
-  font-size: 50px !important;
-  font-weight: 300 !important;
-}
-
-.wForm h3 {
-  font-size: 28px !important;
-  font-weight: 500 !important;
-}
-
-.wForm h4 {
-  font-size: 24px !important;
-  font-weight: 600 !important;
-}
-
-/*FORM CONTAINER*/
-
-
-/* Main container. Must wrap *all* theme CSS */
-.wFormContainer {
-  /* Container for title and form */
-}
-
-.wFormContainer .wForm {
-  background-color: $color-form-background-color;
-  color: $color-palette-neutral-body-text;
-  border: none;
-  border-radius: .2rem;
-  padding: 0 !important;
-  margin-top: 1em;
-  /* Form */
-}
-
-.wFormContainer .wForm form {
-  padding: 0 3rem 2rem 3rem;
-}
-
-/*Messages*/
 
 .wFormThankYou {
   padding: 20px 30px !important;
@@ -258,22 +237,18 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   display: flex;
   /* prevents margin collapse on form title */
   flex-direction: column;
-  /* Form Title */
-  /* Page Title */
-  /* Headings */
+  .wFormTitle {
+    padding: 1.75rem 3rem !important;
+    margin: 0;
+    font-size: $length-title-font-size;
+    color: $color-palette-primary-steel-blue;
+  }
+  .section.pageSection > h4 {
+    font-size: $length-section-title-font-size;
+    color: $color-palette-primary-steel-blue;
+  }
 }
 
-.wFormContainer .wForm .wFormTitle {
-  padding: 1.75rem 3rem !important;
-  margin: 0;
-  font-size: $length-title-font-size;
-  color: $color-palette-primary-steel-blue;
-}
-
-.wFormContainer .wForm .section.pageSection > h4 {
-  font-size: $length-section-title-font-size;
-  color: $color-palette-primary-steel-blue;
-}
 
 .wFormContainer .wForm .htmlSection h4 {
   font-size: $length-section-title-font-size;
@@ -483,7 +458,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 /* In form builder scss variable not applied for checkbox labels */
 table {
-  font-size: $length-main-text-size;
+  font-size: $length-type-body-size;
 }
 
 
@@ -858,7 +833,7 @@ table {
 
 .tt-suggestion {
   font-family: $font-base-font !important;
-  font-size: $length-main-text-size !important;
+  font-size: $length-type-body-size !important;
   color: $color-palette-neutral-body-text !important;
 }
 
