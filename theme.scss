@@ -32,8 +32,6 @@ $length-main-text-size: 16px;
 
 /*INPUTS*/
 $length-input-border-radius: 0.25rem;
-$font-input-text-font: 'Roboto';
-$color-input-text-color: #222222;
 $color-input-background-color: #FFF;
 $color-read-only-text-color: #444444;
 $color-read-only-background-color: #eeeeee;
@@ -148,8 +146,8 @@ $color-progress-bar-color: #444444;
 .saveAndResume input[type='text'],
 .saveAndResume input[type='password'],
 .required:not(.choices):not(select):not(.wfAutosuggest) {
-  font-family: $font-input-text-font !important;
-  color: $color-input-text-color !important;
+  font-family: $font-typeface !important;
+  color: $color-palette-neutral-body-text !important;
   border: 1px solid $color-palette-neutral-60-steel-blue !important;
   border-radius: $length-input-border-radius !important;
   box-sizing: border-box;
@@ -177,7 +175,7 @@ input[type='text'].validate-email:focus,
 input[type='password']#password:focus {
   outline-style: none;
   border: 2px solid $color-palette-primary-steel-blue !important;
-  color: $color-input-text-color;
+  color: $color-palette-neutral-body-text;
 }
 
 input.primaryAction.slds-button.slds-button--brand.full-width {
@@ -200,7 +198,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 .wForm .fa-search.tt-search,
 .wForm .fa-spinner.tt-spinner,
 .wForm .fa-times-circle.tt-clear {
-  color: $color-input-text-color;
+  color: $color-palette-neutral-body-text;
 }
 
 
@@ -569,8 +567,8 @@ table {
 .wFormContainer .wForm .inputWrapper input[type='password'],
 .wFormContainer .wForm .inputWrapper select,
 .wFormContainer .wForm .inputWrapper textarea {
-  font-family: $font-input-text-font;
-  color: $color-input-text-color;
+  font-family: $font-typeface;
+  color: $color-palette-neutral-body-text;
   border: 1px solid $color-palette-neutral-60-steel-blue;
   border-radius: $length-input-border-radius;
   box-sizing: border-box;
@@ -620,12 +618,12 @@ table {
 
 .wFormContainer .wForm .inputWrapper select option {
   padding: 0.25em .5rem;
-  font-family: $font-input-text-font;
+  font-family: $font-typeface;
 }
 
 .wFormContainer .wForm .inputWrapper input:not([type="file"]):not(.tt-hint):read-only,
 .wFormContainer .wForm .inputWrapper textarea:read-only {
-  font-family: $font-input-text-font;
+  font-family: $font-typeface;
   background-color: $color-read-only-background-color !important;
   border: 1px solid $color-read-only-border-color !important;
   color: $color-read-only-text-color !important;
@@ -633,7 +631,7 @@ table {
 
 .wFormContainer .wForm .inputWrapper input:not([type="file"]):not(.tt-hint):-moz-read-only,
 .wFormContainer .wForm .inputWrapper textarea:-moz-read-only {
-  font-family: $font-input-text-font;
+  font-family: $font-typeface;
   background-color: $color-read-only-background-color !important;
   border: 1px solid $color-read-only-border-color !important;
   color: $color-read-only-text-color !important;
@@ -650,7 +648,7 @@ table {
 .wFormContainer .wForm .inputWrapper select.required:focus {
   outline-style: none;
   border: 2px solid $color-palette-primary-steel-blue !important;
-  color: $color-input-text-color;
+  color: $color-palette-neutral-body-text;
 }
 
 .wFormContainer .wForm .inputWrapper textarea.required:not(readonly):focus {
@@ -686,7 +684,7 @@ table {
 }
 
 .wFormContainer .wForm .inputWrapper input[type='radio']:not(:checked):hover ~ .label:before {
-  border: 1px solid $color-input-text-color;
+  border: 1px solid $color-palette-neutral-60-steel-blue;
 }
 
 .wFormContainer .wForm .inputWrapper input[type='radio']:checked ~ .label:after {
@@ -695,7 +693,7 @@ table {
 
   top: 0;
   left: 0;
-  border: 5px solid $color-input-text-color;
+  border: 5px solid $color-palette-neutral-60-steel-blue;
   background: $color-input-background-color;
   width: 10px;
   height: 10px;
@@ -745,11 +743,11 @@ table {
 }
 
 .wFormContainer .wForm .inputWrapper input[type='checkbox']:hover ~ .label:before {
-  border-color: $color-input-text-color;
+  border-color: $color-palette-neutral-60-steel-blue;
 }
 
 .wFormContainer .wForm .inputWrapper input[type='checkbox']:checked ~ .label:before {
-  background: $color-input-text-color;
+  background: $color-palette-neutral-body-text;
 }
 
 .wFormContainer .wForm .inputWrapper input[type='checkbox']:disabled + .label {
@@ -851,14 +849,14 @@ table {
 
 .tt-menu {
   background-color: $color-input-background-color;
-  color: $color-input-text-color;
+  color: $color-palette-neutral-body-text;
   border-radius: $length-input-border-radius;
 }
 
 .tt-suggestion {
-  font-family: $font-input-text-font !important;
+  font-family: $font-typeface !important;
   font-size: $length-main-text-size !important;
-  color: $color-input-text-color !important;
+  color: $color-palette-neutral-body-text !important;
 }
 
 /*CALENDAR*/
