@@ -43,9 +43,6 @@ $color-form-background-color: $color-palette-white;
 /*INPUTS*/
 $length-input-border-radius: 0.25rem;
 $color-input-background-color: $color-palette-white;
-$color-read-only-text-color: #444444;
-$color-read-only-background-color: #eeeeee;
-$color-read-only-border-color: #cccccc;
 
 /*BUTTONS*/
 $font-btn-font: $font-type-font;
@@ -552,23 +549,6 @@ table {
   font-family: $font-type-font;
 }
 
-.wFormContainer .wForm .inputWrapper input:not([type="file"]):not(.tt-hint):read-only,
-.wFormContainer .wForm .inputWrapper textarea:read-only {
-  font-family: $font-type-font;
-  background-color: $color-read-only-background-color !important;
-  border: 1px solid $color-read-only-border-color !important;
-  color: $color-read-only-text-color !important;
-}
-
-.wFormContainer .wForm .inputWrapper input:not([type="file"]):not(.tt-hint):-moz-read-only,
-.wFormContainer .wForm .inputWrapper textarea:-moz-read-only {
-  font-family: $font-type-font;
-  background-color: $color-read-only-background-color !important;
-  border: 1px solid $color-read-only-border-color !important;
-  color: $color-read-only-text-color !important;
-}
-
-
 .wFormContainer .wForm .inputWrapper textarea:focus,
 .wFormContainer .wForm .inputWrapper textarea.required:focus,
 .wFormContainer .wForm .inputWrapper input[type='text']:focus,
@@ -580,10 +560,6 @@ table {
   outline-style: none;
   border: 2px solid $color-palette-primary-steel-blue !important;
   color: $color-palette-neutral-body-text;
-}
-
-.wFormContainer .wForm .inputWrapper textarea.required:not(readonly):focus {
-  border: 1px solid $color-read-only-border-color !important;
 }
 
 /* ------------ */
