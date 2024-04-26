@@ -57,6 +57,15 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
 }
 
 .wFormContainer {
+  .wFormHeader {
+    height: $length-logo-height;
+    background: url($image-logo-image) no-repeat left;
+    background-position: left;
+    height: calc($length-logo-height * 3);
+    border-bottom: 2px solid $color-palette-primary-dark-orange;
+    margin-bottom: 3em;
+  }
+
   .wForm {
     display: flex;
     /* prevents margin collapse on form title */
@@ -237,16 +246,6 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 
 /*HEADER AND LOGO*/
-
-.wFormContainer .wFormHeader {
-  height: $length-logo-height;
-  margin: 1em 0;
-  background: url($image-logo-image) no-repeat left;
-  background-position: left;
-  height: $length-logo-height;
-  background-size: contain;
-}
-
 @media only screen and (max-width: 600px) {
   .wFormContainer .wFormHeader {
     margin-left: 0.5em;
@@ -395,38 +394,24 @@ table {
 
 
 /*LABELS*/
-
 .wFormContainer {
-  /* Field Label */
-  /* Container for radio/checkbox and its label */
-  /* Required Mark */
+  .label {
+    font-weight: 400;
+    font-family: $font-type-font;
+    &.preField {
+      line-height: auto;
+    }
+  }
+  .oneChoice .label.postField {
+    vertical-align: middle !important;
+  }
+  .reqMark:after {
+    color: $color-palette-error;
+  }
+  .label span {
+    font-size: 100% !important;
+  }
 }
-
-.wFormContainer .label {
-  font-weight: 400;
-  font-family: $font-type-font;
-}
-
-.wFormContainer .label.preField {
-  line-height: auto;
-}
-
-.wFormContainer .oneChoice {
-  /* Radio & Checkbox Label */
-}
-
-.wFormContainer .oneChoice .label.postField {
-  vertical-align: middle !important;
-}
-
-.wFormContainer .reqMark:after {
-  color: $color-palette-error;
-}
-
-.oneField .label span {
-  font-size: 100% !important;
-}
-
 
 /*INPUTS*/
 
@@ -563,56 +548,59 @@ table {
 
 /* ------------ */
 /* ------------ */
-.wFormContainer .wForm .inputWrapper input[type='checkbox'] {
-  position: absolute;
-  opacity: 0;
+.wFormContainer {
+  .wForm {
+    .inputWrapper {
+      input {
+        &[type='checkbox'] {
+          position: absolute;
+          opacity: 0;
+          ~ .label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            margin-top: 1em;
+            &:before {
+              content: '';
+              margin-right: 10px;
+              display: inline-block;
+              vertical-align: text-top;
+              width: 18px;
+              height: 18px;
+              border: 1px solid $color-palette-neutral-60-steel-blue;
+              background: $color-input-background-color;
+              position: relative;
+              top: -1px;
+            }
+          }
+          &:hover ~ .label:before {
+            border-color: $color-palette-neutral-60-steel-blue;
+          }
+          &:checked ~ .label {
+            &:before {
+              background: $color-palette-neutral-body-text;
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              left: 5px;
+              top: 9px;
+              background: $color-input-background-color;
+              width: 2px;
+              height: 2px;
+              box-shadow: 2px 0 0 $color-input-background-color, 4px 0 0 $color-input-background-color, 4px -2px 0 $color-input-background-color, 4px -4px 0 $color-input-background-color, 4px -6px 0 $color-input-background-color, 4px -8px 0 $color-input-background-color;
+              transform: rotate(45deg);
+            }
+          }
+          &:disabled + .label {
+            color: #b8b8b8;
+            cursor: auto;
+          }
+        }
+      }
+    }
+  }
 }
-
-.wFormContainer .wForm .inputWrapper input[type='checkbox'] ~ .label {
-  position: relative;
-  cursor: pointer;
-  padding: 0;
-  margin-top: 1em;
-}
-
-.wFormContainer .wForm .inputWrapper input[type='checkbox'] ~ .label:before {
-  content: '';
-  margin-right: 10px;
-  display: inline-block;
-  vertical-align: text-top;
-  width: 18px;
-  height: 18px;
-  border: 1px solid $color-palette-neutral-60-steel-blue;
-  background: $color-input-background-color;
-  position: relative;
-  top: -1px;
-}
-
-.wFormContainer .wForm .inputWrapper input[type='checkbox']:hover ~ .label:before {
-  border-color: $color-palette-neutral-60-steel-blue;
-}
-
-.wFormContainer .wForm .inputWrapper input[type='checkbox']:checked ~ .label:before {
-  background: $color-palette-neutral-body-text;
-}
-
-.wFormContainer .wForm .inputWrapper input[type='checkbox']:disabled + .label {
-  color: #b8b8b8;
-  cursor: auto;
-}
-
-.wFormContainer .wForm .inputWrapper input[type='checkbox']:checked ~ .label:after {
-  content: '';
-  position: absolute;
-  left: 5px;
-  top: 9px;
-  background: $color-input-background-color;
-  width: 2px;
-  height: 2px;
-  box-shadow: 2px 0 0 $color-input-background-color, 4px 0 0 $color-input-background-color, 4px -2px 0 $color-input-background-color, 4px -4px 0 $color-input-background-color, 4px -6px 0 $color-input-background-color, 4px -8px 0 $color-input-background-color;
-  transform: rotate(45deg);
-}
-
 
 /* ------------ */
 
@@ -670,16 +658,6 @@ table {
 
 
 /*AUTOSUGGEST*/
-.wFormContainer {
-  /* The auto-completion suggestion.
-   * Shown underneath the text input.
-   * Must match exactly the position of user input
-   */
-  /* The spinner indicating the query is in progress.
-   * Positioned inside the text input.
-   */
-}
-
 .wFormContainer .wfAutosuggest.tt-hint {
   margin-top: 0;
 }
@@ -731,10 +709,6 @@ a.errMsg {
 }
 
 /* Footer */
-.wFormContainer .wFormFooter {
-  /* Assistance link */
-}
-
 .wFormContainer .wFormFooter .supportInfo {
   text-align: center;
 }
