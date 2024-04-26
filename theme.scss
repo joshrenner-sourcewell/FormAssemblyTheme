@@ -23,11 +23,12 @@ $color-palette-active-button: #027ABB;
 $color-palette-active-hover: #06669D;
 $color-palette-active-link: #027ABB;
 
+$color-palette-error: #FF020B;
+
 /*TYPOGRAPHY*/
 $length-title-font-size: 50px;
 $length-section-title-font-size: 20px;
 $length-main-text-size: 16px;
-$color-error-color: #ff0126;
 
 /*INPUTS*/
 $length-input-border-radius: 0.25rem;
@@ -538,7 +539,7 @@ table {
 }
 
 .wFormContainer .reqMark:after {
-  color: $color-error-color;
+  color: $color-palette-error;
 }
 
 .oneField .label span {
@@ -1006,37 +1007,37 @@ html .kalendae .k-calendar .k-days span.k-active:hover {
 .wFormContainer .oneField.errFld .inputWrapper input[type='password'],
 .wFormContainer .oneField.errFld .inputWrapper textarea,
 .wFormContainer .oneField.errFld .inputWrapper select {
-  border-color: $color-error-color !important;
+  border-color: $color-palette-error !important;
 }
 
 .wFormContainer .oneField.errFld div.errMsg {
   margin-top: 0.5em;
-  color: $color-error-color;
+  color: $color-palette-error;
 }
 
 .wfTab.errMsg {
-  border: 1px solid $color-error-color !important;
+  border: 1px solid $color-palette-error !important;
   background-color: $color-palette-neutral-light-background;
 }
 
 .wfTab.wfTabCurrentPage.errMsg,
 .wfTab.errMsg:hover {
-  border: 1px solid $color-error-color !important;
-  background-color: $color-error-color !important;
+  border: 1px solid $color-palette-error !important;
+  background-color: $color-palette-error !important;
   color: $color-palette-neutral-light-background !important;
 }
 
 .errorMessage {
-  color: $color-error-color !important;
+  color: $color-palette-error !important;
 }
 
 a.errMsg {
-  color: $color-error-color;
+  color: $color-palette-error;
   text-decoration: underline;
 }
 
 .wFormContainer .errMsg {
-  color: $color-error-color !important;
+  color: $color-palette-error !important;
 }
 
 /*BUTTONS*/
