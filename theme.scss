@@ -416,130 +416,134 @@ table {
 /*INPUTS*/
 
 /* Main container. Must wrap *all* theme CSS */
-.wFormContainer .wForm .inputWrapper input[type='text'],
-.wFormContainer .wForm .inputWrapper input[type='password'],
-.wFormContainer .wForm .inputWrapper select,
-.wFormContainer .wForm .inputWrapper textarea {
-  font-family: $font-type-font;
-  color: $color-palette-neutral-body-text;
-  border: 1px solid $color-palette-neutral-60-steel-blue;
-  border-radius: $length-input-border-radius;
-  box-sizing: border-box;
-  font-size: 1em;
-  width: 20em;
-  background-color: $color-input-background-color;
-}
+.wFormContainer {
+  .wForm {
+    .inputWrapper {
+      input[type='text'],
+      input[type='password'],
+      select,
+      textarea {
+        font-family: $font-type-font;
+        color: $color-palette-neutral-body-text;
+        border: 1px solid $color-palette-neutral-60-steel-blue;
+        border-radius: $length-input-border-radius;
+        box-sizing: border-box;
+        font-size: 1em;
+        width: 20em;
+        background-color: $color-input-background-color;      
+      }
 
-.wFormContainer .wForm .inputWrapper input[type='text'],
-.wFormContainer .wForm .inputWrapper input[type='password'],
-.wFormContainer .wForm .inputWrapper input[type='file'],
-.wFormContainer .wForm .inputWrapper select:not([multiple]) {
-  height: 45px;
-  padding: 0 .5rem;
-}
+      input[type='text'],
+      input[type='password'],
+      input[type='file'],
+      select:not([multiple]) {
+        height: 45px;
+        padding: 0 .5rem;
+      }
 
-.wFormContainer .wForm .inputWrapper select[multiple] {
-  width: auto;
-}
+      input[type='file'] {
+        border: none !important;
+        background: transparent !important;
+        max-width: 100%;
+        &::-webkit-file-upload-button {
+          color: $color-palette-neutral-light-background !important;
+          background-color: $color-palette-active-link !important;
+          border-radius: $length-input-border-radius !important;
+          -webkit-appearance: none !important;
+          border: none !important;
+          &:hover {
+            color: $color-button-hover-text-color !important;
+            background-color: $color-button-hover-background-color !important;
+          }
+        }
+      }
 
-.wFormContainer .wForm .inputWrapper input[type='file'] {
-  border: none !important;
-  background: transparent !important;
-  max-width: 100%;
-}
+      select {
+        &[multiple] {
+          width: auto;
+        }
+        option {
+          padding: 0.25em .5rem;
+          font-family: $font-type-font;
+        }
+      }
 
-.wFormContainer .wForm .inputWrapper input[type='file']::-webkit-file-upload-button {
-  color: $color-palette-neutral-light-background !important;
-  background-color: $color-palette-active-link !important;
-  border-radius: $length-input-border-radius !important;
-  -webkit-appearance: none !important;
-  border: none !important;
+      textarea {
+        height: 5em;
+        padding: .5rem !important;
+      }
 
-}
+      textarea:focus,
+      textarea.required:focus,
+      input[type='text']:focus,
+      input[type='text'].required:focus,
+      input[type='password']:focus,
+      input[type='password'].required:focus,
+      select:focus,
+      select.required:focus {
+        outline-style: none;
+        border: 2px solid $color-palette-primary-steel-blue !important;
+        color: $color-palette-neutral-body-text;
+      }
 
+      input[type='radio'] {
+        position: absolute;
+        opacity: 0;
 
-.wFormContainer .wForm .inputWrapper input[type='file']::-webkit-file-upload-button:hover {
-  color: $color-button-hover-text-color !important;
-  background-color: $color-button-hover-background-color !important;
-}
+        ~ .label {
+          position: relative;
+          cursor: pointer;
+          padding: 0;
+          margin-top: 0.3em;
+          margin-bottom: 0.4em;
 
-.wFormContainer .wForm .inputWrapper textarea {
-  height: 5em;
-  padding: .5rem !important;
-}
+          &:before {
+            content: '';
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 1px solid $color-palette-neutral-60-steel-blue;
+            background: $color-input-background-color;
+            position: relative;
+            top: -1px;
+          }        
+        }
 
-.wFormContainer .wForm .inputWrapper select option {
-  padding: 0.25em .5rem;
-  font-family: $font-type-font;
-}
+        &:not(:checked):hover ~ .label:before {
+          border: 1px solid $color-palette-neutral-60-steel-blue;
+        }
 
-.wFormContainer .wForm .inputWrapper textarea:focus,
-.wFormContainer .wForm .inputWrapper textarea.required:focus,
-.wFormContainer .wForm .inputWrapper input[type='text']:focus,
-.wFormContainer .wForm .inputWrapper input[type='text'].required:focus,
-.wFormContainer .wForm .inputWrapper input[type='password']:focus,
-.wFormContainer .wForm .inputWrapper input[type='password'].required:focus,
-.wFormContainer .wForm .inputWrapper select:focus,
-.wFormContainer .wForm .inputWrapper select.required:focus {
-  outline-style: none;
-  border: 2px solid $color-palette-primary-steel-blue !important;
-  color: $color-palette-neutral-body-text;
+        &:checked ~ .label {
+          &:before {
+            border: 1px solid rgba(0, 0, 0, 0);
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 5px solid $color-palette-neutral-60-steel-blue;
+            background: $color-input-background-color;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+          }
+        }
+
+        &:disabled + .label {
+          color: #b8b8b8;
+          cursor: auto;
+        }
+      }
+    }
+  }
 }
 
 /* ------------ */
-.wFormContainer .wForm .inputWrapper input[type='radio'] {
-  position: absolute;
-  opacity: 0;
-}
-
-.wFormContainer .wForm .inputWrapper input[type='radio'] ~ .label {
-  position: relative;
-  cursor: pointer;
-  padding: 0;
-  margin-top: 0.3em;
-  margin-bottom: 0.4em;
-}
-
-.wFormContainer .wForm .inputWrapper input[type='radio'] ~ .label:before {
-  content: '';
-  margin-right: 10px;
-  display: inline-block;
-  vertical-align: text-top;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 1px solid $color-palette-neutral-60-steel-blue;
-  background: $color-input-background-color;
-  position: relative;
-  top: -1px;
-}
-
-.wFormContainer .wForm .inputWrapper input[type='radio']:not(:checked):hover ~ .label:before {
-  border: 1px solid $color-palette-neutral-60-steel-blue;
-}
-
-.wFormContainer .wForm .inputWrapper input[type='radio']:checked ~ .label:after {
-  content: '';
-  position: absolute;
-
-  top: 0;
-  left: 0;
-  border: 5px solid $color-palette-neutral-60-steel-blue;
-  background: $color-input-background-color;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.wFormContainer .wForm .inputWrapper input[type='radio']:checked ~ .label:before {
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-
-.wFormContainer .wForm .inputWrapper input[type='radio']:disabled + .label {
-  color: #b8b8b8;
-  cursor: auto;
-}
-
 .wFormContainer .wForm[dir="rtl"] input[type='radio']:checked ~ .label:after {
   right: 5px;
   top: 5px;
