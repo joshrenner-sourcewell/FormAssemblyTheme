@@ -405,27 +405,21 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 .wFormContainer .group > .label {
   margin-top: 1em;
-  // color: $color-palette-neutral-body-text;
 }
 
 .htmlSection .htmlContent span {
-  // color: $color-palette-neutral-body-text !important;
-  // font-family: $font-typeface !important;
   font-size: 100% !important;
   line-height: auto;
 
 }
 
 .htmlSection .htmlContent {
-  // color: $color-palette-neutral-body-text !important;
-  // font-family: $font-typeface !important;
   font-size: 100% !important;
   line-height: auto;
 }
 
 .wFormContainer fieldset > fieldset:last-child {
   margin-bottom: 0;
-  // color: $color-palette-neutral-body-text;
 }
 
 .wFormContainer .pageSection > *:not([type="hidden"]):last-child {
@@ -451,13 +445,11 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   height: 2em;
   padding: .25em;
   vertical-align: middle;
-  // color: $color-palette-neutral-body-text !important;
 }
 
 .wFormContainer table.matrixLayout tbody tr th.headerCol,
 .wFormContainer table.gridLayout tbody tr th.headerCol {
   height: 2em;
-  // color: $color-palette-neutral-body-text !important;
 }
 
 .wFormContainer table.matrixLayout tbody tr:nth-child(odd),
@@ -531,12 +523,10 @@ table {
 .wFormContainer .label {
   font-weight: 400;
   font-family: $font-typeface;
-  // color: $color-palette-neutral-body-text;
 }
 
 .wFormContainer .label.preField {
   line-height: auto;
-  // color: $color-palette-neutral-body-text;
 }
 
 .wFormContainer .oneChoice {
@@ -545,7 +535,6 @@ table {
 
 .wFormContainer .oneChoice .label.postField {
   vertical-align: middle !important;
-  // color: $color-palette-neutral-body-text;
 }
 
 .wFormContainer .reqMark:after {
@@ -553,8 +542,6 @@ table {
 }
 
 .oneField .label span {
-  // color: $color-palette-neutral-body-text !important;
-  // font-family: $font-typeface !important;
   font-size: 100% !important;
 }
 
@@ -606,7 +593,6 @@ table {
 .wFormContainer .wForm .inputWrapper input[type='file'] {
   border: none !important;
   background: transparent !important;
-  // color: $color-palette-neutral-body-text !important;
   max-width: 100%;
 }
 
@@ -724,10 +710,6 @@ table {
   cursor: auto;
 }
 
-.wFormContainer .wForm[dir="rtl"] input[type='radio'] ~ .label:before {
-
-}
-
 .wFormContainer .wForm[dir="rtl"] input[type='radio']:checked ~ .label:after {
   right: 5px;
   top: 5px;
@@ -827,29 +809,17 @@ table {
 .wFormContainer .count-words {
   font-size: 0.85em;
   margin-top: 2px;
-  // color: $color-palette-neutral-body-text;
 }
 
 #preview #render .wForm .oneField.hintsTooltip .field-hint {
-  background-color: #eeeeee !important;
   padding: .3em;
 }
 
-.wForm .hintsTooltip .hint {
-  color: #222222 !important;
-  background-color: #eeeeee !important;
-}
-
-
 .wForm .field-hint-inactive .hint {
-  background-color: $color-palette-neutral-light-background !important;
-  // color: $color-palette-neutral-body-text !important;
   opacity: 1 !important;
 }
 
 .wForm .hintsBelow .field-hint, .wform .hintsSide .field-hint {
-  background-color: $color-palette-neutral-light-background !important;
-  // color: $color-palette-neutral-body-text !important;
   opacity: 1 !important;
 }
 
