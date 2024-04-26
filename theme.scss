@@ -21,7 +21,6 @@ $color-palette-active-link: #027ABB;
 /*LOGO*/
 $image-logo-image: '//sourcewellmn.tfaforms.net/forms/get_image/4/1HYcZSd4rq06hqBDxF1psuoaeEGfX2lWAYiCrP5MI7Ju8KmPUPpU21ixtauUmuw6-Sourcewell_logo1.jpg';
 $length-logo-size: 144px;
-$select-logo-position_left_center_right: left;
 
 /*FORM*/
 $color-fieldset-border-color: #444444;
@@ -250,7 +249,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   height: $length-logo-size;
   margin: 1em 0;
   background: url($image-logo-image) no-repeat left;
-  background-position: $select-logo-position_left_center_right;
+  background-position: left;
   height: $length-logo-size;
   background-size: contain;
 }
