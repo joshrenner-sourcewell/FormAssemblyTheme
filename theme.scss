@@ -5,6 +5,7 @@
 /*----------------------*/
 /*COLOR*/
 $color-background-color: #ffffff;
+$color-steele-blue: #506D85;
 
 /*LOGO*/
 $image-logo-image: '//sourcewellmn.tfaforms.net/forms/get_image/4/1HYcZSd4rq06hqBDxF1psuoaeEGfX2lWAYiCrP5MI7Ju8KmPUPpU21ixtauUmuw6-Sourcewell_logo1.jpg';
@@ -20,10 +21,8 @@ $color-fieldset-border-color: #444444;
 /*TYPOGRAPHY*/
 $font-main-font: 'Source Sans Pro', Calibri, sans-serif;
 $length-title-font-size: 50px;
-$color-title-text-color: #506d85;
 $font-section-title-font: $font-main-font;
 $length-section-title-font-size: 20px;
-$color-section-title-text-color: #444444;
 $length-main-text-size: 16px;
 $color-main-text-color: #444444;
 $color-link-text-color: #005eff;
@@ -183,7 +182,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   margin-bottom: 20px;
   font-weight: 900;
   font-size: $length-section-title-font-size !important;
-  color: $color-section-title-text-color !important;
+  color: $color-steele-blue !important;
   font-family: $font-section-title-font !important;
 }
 
@@ -258,24 +257,24 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   margin: 0;
   font-size: $length-title-font-size;
   background-color: $color-background-color;
-  color: $color-title-text-color;
+  color: $color-steele-blue;
 }
 
 .wFormContainer .wForm .section.pageSection > h4 {
   font-size: $length-section-title-font-size;
-  color: $color-section-title-text-color;
+  color: $color-steele-blue;
   font-family: $font-section-title-font;
 }
 
 .wFormContainer .wForm .htmlSection h4 {
   font-size: $length-section-title-font-size;
-  color: $color-section-title-text-color;
+  color: $color-steele-blue;
   font-family: $font-section-title-font;
 }
 
 .wForm div.section > .preField {
   font-size: $length-section-title-font-size !important;
-  color: $color-section-title-text-color !important;
+  color: $color-steele-blue !important;
   font-family: $font-section-title-font !important;
 }
 
@@ -394,7 +393,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 .wFormContainer fieldset legend {
   font-size: $length-section-title-font-size !important;
-  color: $color-section-title-text-color !important;
+  color: $color-steele-blue !important;
   font-family: $font-section-title-font !important;
 }
 
@@ -425,7 +424,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 .wFormContainer .pageSection > *:not([type="hidden"]):last-child {
   margin-bottom: 0;
-  color: $color-section-title-text-color;
+  color: $color-steele-blue;
 }
 
 
@@ -947,14 +946,14 @@ html .kalendae .k-calendar .k-btn-close:hover {
 
 html .kalendae .k-calendar .k-caption {
   font-size: 100%;
-  color: $color-section-title-text-color;
+  color: $color-steele-blue;
 }
 
 html .kalendae .k-calendar .k-btn-previous-month,
 html .kalendae .k-calendar .k-btn-next-month,
 html .kalendae .k-calendar .k-btn-previous-year,
 html .kalendae .k-calendar .k-btn-next-year {
-  color: $color-section-title-text-color;
+  color: $color-steele-blue;
   line-height: normal;
   height: auto;
   font-size: 1.4em;
@@ -965,7 +964,7 @@ html .kalendae .k-calendar .k-btn-previous-month:hover,
 html .kalendae .k-calendar .k-btn-next-month:hover,
 html .kalendae .k-calendar .k-btn-previous-year:hover,
 html .kalendae .k-calendar .k-btn-next-year:hover {
-  color: $color-section-title-text-color;
+  color: $color-steele-blue;
   font-weight: 700;
 }
 
