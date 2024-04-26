@@ -44,7 +44,6 @@ $length-input-border-radius: 0.25rem;
 $font-input-text-font: 'Roboto';
 $color-input-text-color: #222222;
 $color-input-background-color: #FFF;
-$color-input-border-color: #444444;
 $color-read-only-text-color: #444444;
 $color-read-only-background-color: #eeeeee;
 $color-read-only-border-color: #cccccc;
@@ -160,7 +159,7 @@ $color-progress-bar-color: #444444;
 .required:not(.choices):not(select):not(.wfAutosuggest) {
   font-family: $font-input-text-font !important;
   color: $color-input-text-color !important;
-  border: 1px solid $color-input-border-color !important;
+  border: 1px solid $color-palette-neutral-60-steel-blue !important;
   border-radius: $length-input-border-radius !important;
   box-sizing: border-box;
   font-size: 1em !important;
@@ -597,7 +596,7 @@ table {
 .wFormContainer .wForm .inputWrapper textarea {
   font-family: $font-input-text-font;
   color: $color-input-text-color;
-  border: 1px solid $color-input-border-color;
+  border: 1px solid $color-palette-neutral-60-steel-blue;
   border-radius: $length-input-border-radius;
   box-sizing: border-box;
   font-size: 1em;
@@ -706,7 +705,7 @@ table {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: 1px solid $color-input-border-color;
+  border: 1px solid $color-palette-neutral-60-steel-blue;
   background: $color-input-background-color;
   position: relative;
   top: -1px;
@@ -769,7 +768,7 @@ table {
   vertical-align: text-top;
   width: 18px;
   height: 18px;
-  border: 1px solid $color-input-border-color;
+  border: 1px solid $color-palette-neutral-60-steel-blue;
   background: $color-input-background-color;
   position: relative;
   top: -1px;
@@ -912,7 +911,7 @@ html {
 
 html .kalendae {
   background: $color-palette-neutral-light-background;
-  border: 2px solid $color-input-border-color !important;
+  border: 2px solid $color-palette-neutral-60-steel-blue !important;
   font-size: 100%;
   font-family: $font-main-font;
   border-radius: $length-input-border-radius;
@@ -1029,7 +1028,7 @@ html .kalendae .k-calendar .k-days span.k-selected.k-active {
 }
 
 html .kalendae .k-calendar .k-days span.k-active:hover {
-  border-color: $color-input-border-color;
+  border-color: $color-palette-neutral-60-steel-blue;
   opacity: 1;
 }
 
