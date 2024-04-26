@@ -20,7 +20,6 @@ $color-fieldset-border-color: #444444;
 
 /*TYPOGRAPHY*/
 $font-main-font: 'Source Sans Pro', Calibri, sans-serif;
-$font-title-font: $font-main-font;
 $length-title-font-size: 50px;
 $color-title-text-color: #506d85;
 $font-section-title-font: $font-main-font;
@@ -255,7 +254,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 }
 
 .wFormContainer .wForm .wFormTitle {
-  font-family: $font-title-font;
+  font-family: $font-main-font;
   padding: 1.75rem 3rem !important;
   margin: 0;
   font-size: $length-title-font-size;
