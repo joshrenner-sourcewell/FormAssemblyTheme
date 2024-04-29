@@ -624,55 +624,71 @@ table {
 
 
 /* HINTS */
-.wFormContainer .field-hint-inactive,
-.wFormContainer .field-hint {
-  line-height: 100%;
-  font-size: 1em;
+.wFormContainer {
+  .field-hint-inactive,
+  .field-hint {
+    line-height: 100%;
+    font-size: 1em;
+  }
+
+  .field-hint-inactive .hint {
+    font-size: 0.85em;
+    line-height: 1.75em;
+    transition: all 0.25s linear;
+  }
+
+  .field-hint .hint {
+    font-size: 0.85em;
+    line-height: 1.75em;
+    transition: all 0.25s linear;
+  }
+
+  .lengthIndicator,
+  .count-words {
+    font-size: 0.85em;
+    margin-top: 2px;
+  }
+
+  #preview #render .wForm .oneField.hintsTooltip .field-hint {
+    padding: .3em;
+  }
 }
 
-.wFormContainer .field-hint-inactive .hint {
-  font-size: 0.85em;
-  line-height: 1.75em;
-  transition: all 0.25s linear;
+.wForm {
+  .field-hint-inactive .hint {
+    opacity: 1 !important;
+  }
+
+  .hintsBelow, 
+  .hintsSide {
+    .field-hint {
+      opacity: 1 !important;
+    }
+  }
 }
 
-.wFormContainer .field-hint .hint {
-  font-size: 0.85em;
-  line-height: 1.75em;
-  transition: all 0.25s linear;
-}
-
-.wFormContainer .lengthIndicator,
-.wFormContainer .count-words {
-  font-size: 0.85em;
-  margin-top: 2px;
-}
-
-#preview #render .wForm .oneField.hintsTooltip .field-hint {
-  padding: .3em;
-}
-
-.wForm .field-hint-inactive .hint {
-  opacity: 1 !important;
-}
-
-.wForm .hintsBelow .field-hint, .wform .hintsSide .field-hint {
+.wForm .hintsBelow .field-hint, 
+.wform .hintsSide .field-hint {
   opacity: 1 !important;
 }
 
 
 /*AUTOSUGGEST*/
-.wFormContainer .wfAutosuggest.tt-hint {
-  margin-top: 0;
-}
+.wFormContainer {
+  .wfAutosuggest {
+    &.tt-hint {
+      margin-top: 0
+    }
+    &.tt-input {
+      background-color: $color-input-background-color !important;
+    }
+  }
 
-.wFormContainer .wfAutosuggest.tt-input {
-  background-color: $color-input-background-color !important;
-}
-
-.wFormContainer .tt-spinner {
-  top: 0.6rem;
-  right: 0.25rem;
+  .wfAutosuggest,
+  .tt-spinner {
+    top: 0.6rem;
+    right: 0.25rem;
+  }
 }
 
 .tt-menu {
@@ -687,16 +703,20 @@ table {
 }
 
 /*ERRORS*/
-.wFormContainer .oneField.errFld .inputWrapper input[type='text'],
-.wFormContainer .oneField.errFld .inputWrapper input[type='password'],
-.wFormContainer .oneField.errFld .inputWrapper textarea,
-.wFormContainer .oneField.errFld .inputWrapper select {
-  border-color: $color-palette-error !important;
-}
+.wFormContainer .oneField.errFld {
+  .inputWrapper { 
+    input[type='text'],
+    input[type='password'],
+    textarea,
+    select {
+      border-color: $color-palette-error !important;
+    }
+  }
 
-.wFormContainer .oneField.errFld div.errMsg {
-  margin-top: 0.5em;
-  color: $color-palette-error;
+  div.errMsg {
+    margin-top: 0.5em;
+    color: $color-palette-error;
+  }
 }
 
 .errorMessage {
