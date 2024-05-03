@@ -85,7 +85,6 @@ $length-button-padding-x: 45px;
   }
 }
 
-
 /*---------------------*/
 /*Combatting some phantom BS*/
 body:not(.drag) #preview .hover:not(.selected):not(tr):before {
@@ -470,10 +469,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 /* Optional - Apply for FormAssembly hosted forms only. */
 .wFormWebPage {
   background-color: $color-form-background-color;
-}
-
-@media only screen and (max-width: 600px) {
-  .wFormWebPage {
+  @media only screen and (max-width: 600px) {
     margin: 0 !important;
     .wForm {
       border-radius: 0;
@@ -484,6 +480,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
     }
   }
 }
+
 
 /*MOBILE FORM CONTAINER*/
 /* Mobile Form Container in FB Canvas & Preview */
