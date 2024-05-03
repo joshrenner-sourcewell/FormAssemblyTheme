@@ -710,17 +710,18 @@ a.errMsg {
 /* Footer */
 .wFormContainer .wFormFooter .supportInfo {
   text-align: center;
+
+  a {
+    color: $color-palette-neutral-light-background;
+
+    &:hover {
+      color: $color-palette-neutral-light-background;
+    }
+  }
 }
 
-.wFormContainer .wFormFooter .supportInfo a {
-  color: $color-palette-neutral-light-background;
-}
-
-.wFormContainer .wFormFooter .supportInfo a:hover {
-  color: $color-palette-neutral-light-background;
-}
-
-.wFormContainer .oneField, .wFormContainer .section {
+.wFormContainer .oneField, 
+.wFormContainer .section {
   -webkit-animation: fadeIn 0.5s;
   animation: fadeIn 0.5s;
 }
