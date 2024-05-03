@@ -274,15 +274,68 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
       border-color: $color-palette-primary-steel-blue !important;
     }
   }
+
   .group > .label {
     margin-top: 1em;
   }
+
   fieldset > fieldset:last-child {
     margin-bottom: 0;
   }
+
   .pageSection > *:not([type="hidden"]):last-child {
     margin-bottom: 0;
     color: $color-palette-primary-steel-blue;
+  }
+
+  /* Responsive Tables - if the screen size is too small to display the table without horizontal scrolling,
+  the table is automatically "stacked". To see the effect, reduce your browser window size. */
+  table {
+    &.matrixLayout,
+    &.gridLayout {
+      /* Mobile Tables (Grids/ Matrix) in FB Canvas and Preview */
+      #preview .mobile & {
+        margin: 20px 0 !important;
+      }
+
+      thead tr.headerRow {
+        background-color: rgba(0, 0, 0, 0.025);
+        th {
+          height: 2em;
+          padding: .25em;
+          vertical-align: middle;
+        }
+      }
+
+      tbody {
+        tr {
+          th.headerCol {
+            height: 2em;
+          }
+          &:nth-child(odd) {
+            background-color: transparent;
+          }
+          &:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.025);
+          }
+
+          /* in form builder preview, tables have additional invisible rows */
+          #preview & {
+            &:nth-child(n) {
+              background-color: transparent;
+            }
+            &:nth-child(4n) {
+              background-color: rgba(0, 0, 0, 0.025);
+            }
+          }
+        }
+
+        td {
+          height: 2em;
+          padding: .25em;
+        }
+      }
+    }
   }
 }
 
@@ -295,88 +348,31 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   }
 }
 
-/*TABLES*/
-/* Tables */
-.wFormContainer {
-  /* Responsive Tables - if the screen size is too small to display the table without horizontal scrolling,
-   the table is automatically "stacked". To see the effect, reduce your browser window size. */
-}
-
-.wFormContainer table.matrixLayout thead tr.headerRow,
-.wFormContainer table.gridLayout thead tr.headerRow {
-  background-color: rgba(0, 0, 0, 0.025);
-}
-
-.wFormContainer table.matrixLayout thead tr.headerRow th,
-.wFormContainer table.gridLayout thead tr.headerRow th {
-  height: 2em;
-  padding: .25em;
-  vertical-align: middle;
-}
-
-.wFormContainer table.matrixLayout tbody tr th.headerCol,
-.wFormContainer table.gridLayout tbody tr th.headerCol {
-  height: 2em;
-}
-
-.wFormContainer table.matrixLayout tbody tr:nth-child(odd),
-.wFormContainer table.gridLayout tbody tr:nth-child(odd) {
-  background-color: transparent;
-}
-
-.wFormContainer table.matrixLayout tbody tr:nth-child(even),
-.wFormContainer table.gridLayout tbody tr:nth-child(even) {
-  background-color: rgba(0, 0, 0, 0.025);
-}
-
-.wFormContainer table.matrixLayout tbody td,
-.wFormContainer table.gridLayout tbody td {
-  height: 2em;
-  padding: .25em;
-}
-
-/* in form builder preview, tables have additional invisible rows */
-#preview .wFormContainer table.matrixLayout tbody tr:nth-child(n),
-#preview .wFormContainer table.gridLayout tbody tr:nth-child(n) {
-  background-color: transparent;
-}
-
-#preview .wFormContainer table.matrixLayout tbody tr:nth-child(4n),
-#preview .wFormContainer table.gridLayout tbody tr:nth-child(4n) {
-  background-color: rgba(0, 0, 0, 0.025);
-}
 
 /* In form builder scss variable not applied for checkbox labels */
 table {
   font: $text-type-body-2;
 }
 
-
 .wForm .gridLayout.stacked {
   margin: 20px 0;
+
+  tr {
+    margin: 10px 1rem 10px 0;
+    padding: 10px auto;
+    width: 92.5%;
+
+    td {
+      height: auto !important;
+
+      input[type='text'] {
+        max-width: 90%;
+      }
+    }
+  }
 }
 
-.wForm .gridLayout.stacked tr {
-  margin: 10px 1rem 10px 0;
-  padding: 10px auto;
-  width: 92.5%;
-}
 
-.wForm .gridLayout.stacked tr td {
-  height: auto !important;
-}
-
-.wForm .gridLayout.stacked tr td input[type='text'] {
-  max-width: 90%;
-}
-
-
-/* Mobile Tables (Grids/ Matrix) in FB Canvas and Preview */
-
-#preview .mobile .matrixLayout,
-#preview .mobile .gridLayout {
-  margin: 20px 0 !important;
-}
 
 
 /*LABELS*/
