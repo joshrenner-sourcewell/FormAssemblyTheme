@@ -51,6 +51,48 @@ $length-button-padding-y: 15px;
 $length-button-padding-x: 45px;
 
 /*---------------------*/
+/*PLACEHOLDER SELECTORS*/
+%primary-action {
+  
+}
+
+/*TYPOGRAPHY*/
+.wFormContainer .wForm {
+  h1, h2, h3, h4 {
+    color: $color-palette-primary-steel-blue;
+  }
+
+  h1 {
+    font: $text-type-head-1 $font-type-font;
+    padding: 1.75rem 0;
+    margin: 0;  
+  }
+
+  h2 {
+    font: $text-type-head-2 $font-type-font;
+  }
+
+  h3 {
+    font: $text-type-head-3 $font-type-font;
+  }
+
+  h4 {
+    font: $text-type-head-4 $font-type-font;
+  }
+
+  a {
+    text-decoration: $text-type-link-decoration;
+    color: $color-palette-active-link;
+    background: none;
+    &:hover {
+      text-decoration: $text-type-link-hover-decoration;
+      color: $color-palette-active-hover;
+    }
+  }
+}
+
+
+/*---------------------*/
 /*Combatting some phantom BS*/
 body:not(.drag) #preview .hover:not(.selected):not(tr):before {
   display: none !important;
@@ -103,43 +145,23 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
       }
     }
 
-    /*HEADLINES*/
-    h1, h2, h3, h4, .wFormTitle {
-      color: $color-palette-primary-steel-blue;
-    }
-
-    h1,
+    /*TYPOGRAPHY*/
     .wFormTitle {
-      font: $text-type-head-1 $font-type-font;
-      padding: 1.75rem 0;
-      margin: 0;  
+      @extend h1;  
     }
 
-    h2,
     .section.pageSection > h4 {
-      font: $text-type-head-2 $font-type-font;
+      @extend h2;
     }
 
-    h3 {
-      font: $text-type-head-3 $font-type-font;
-    }
-
-    h4,
-    legend,
+    legend, 
     .group > .label.preField {
-      font: $text-type-head-4 $font-type-font;
+      @extend h4;
     }
-
-    a, 
+    
     :link,
     input[type="button"] {
-      text-decoration: $text-type-link-decoration;
-      color: $color-palette-active-link;
-      background: none;
-      &:hover {
-        text-decoration: $text-type-link-hover-decoration;
-        color: $color-palette-active-hover;
-      }
+      @extend a;
     }
 
     input[type="submit"],
