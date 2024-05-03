@@ -380,18 +380,22 @@ table {
   .label {
     font-weight: 400;
     font-family: $font-type-font;
+
     &.preField {
       line-height: auto;
     }
+
+    span {
+      font-size: 100% !important;
+    }
   }
+
   .oneChoice .label.postField {
     vertical-align: middle !important;
   }
+  
   .reqMark:after {
     color: $color-palette-error;
-  }
-  .label span {
-    font-size: 100% !important;
   }
 }
 
