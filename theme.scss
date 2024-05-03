@@ -107,6 +107,10 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
     /*background-position-y: calc($length-logo-height * -0.5)+ unquote("px")*/
     border-bottom: 2px solid $color-palette-primary-dark-orange;
     margin-bottom: 3em;
+
+    @media only screen and (max-width: 600px) {
+      margin-left: 0.5em;
+    }
   }
 
   /*FORM*/
@@ -147,7 +151,11 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
 
     /*TYPOGRAPHY*/
     .wFormTitle {
-      @extend h1;  
+      @extend h1;
+      @media only screen and (max-width: 600px) {
+        margin: 0;
+        padding: 1rem !important;
+      }
     }
 
     .section.pageSection > h4 {
@@ -158,7 +166,7 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
     .group > .label.preField {
       @extend h4;
     }
-    
+
     :link,
     input[type="button"] {
       @extend a;
@@ -491,18 +499,6 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   }
   .wFormTitle {
     padding: 1rem !important;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .wFormContainer {
-    .wFormHeader {
-      margin-left: 0.5em;
-    }
-    .wForm .wFormTitle {
-      margin: 0;
-      padding: 1rem !important;
-    }
   }
 }
 
