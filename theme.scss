@@ -702,11 +702,13 @@ table {
 
 /*ERRORS*/
 .wFormContainer .oneField.errFld {
-  .inputWrapper input[type='text'],
-  .inputWrapper input[type='password'],
-  .inputWrapper textarea,
-  .inputWrapper select {
-    border-color: $color-palette-error !important;
+  .inputWrapper {
+    input[type='text'],
+    input[type='password'],
+    textarea,
+    select {
+      border-color: $color-palette-error !important;
+    }
   }
 
   div.errMsg {
