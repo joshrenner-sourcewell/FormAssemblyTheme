@@ -143,6 +143,15 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
 
   .htmlSection {
     margin: 1em auto;
+
+    .htmlContent {
+      font-size: 100% !important;
+      line-height: auto;
+      span {
+        font-size: 100% !important;
+        line-height: auto;
+      }
+    }
   }
 
   .wFormHelp {
@@ -336,15 +345,6 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
         }
       }
     }
-  }
-}
-
-.htmlSection .htmlContent {
-  font-size: 100% !important;
-  line-height: auto;
-  span {
-    font-size: 100% !important;
-    line-height: auto;
   }
 }
 
