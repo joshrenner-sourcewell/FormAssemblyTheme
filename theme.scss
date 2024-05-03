@@ -214,10 +214,12 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   margin-top: 1.6em !important;
 }
 
-.wForm .fa-search.tt-search,
-.wForm .fa-spinner.tt-spinner,
-.wForm .fa-times-circle.tt-clear {
-  color: $color-palette-neutral-body-text;
+.wForm {
+  .fa-search.tt-search,
+  .fa-spinner.tt-spinner,
+  .fa-times-circle.tt-clear {
+    color: $color-palette-neutral-body-text;
+  }
 }
 
 
