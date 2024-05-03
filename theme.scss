@@ -501,12 +501,12 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   fieldset {
     margin: 1em 0 0.5em 0;
     padding: .5em 1em;
-    color: $color-palette-neutral-body-text !important;
+    color: $color-palette-neutral-body-text;
     border: $color-palette-neutral-30-steel-blue 1px solid;
 
     &.highlighted {
-      border: double !important;
-      border-color: $color-palette-primary-steel-blue !important;
+      border-style: double;
+      border-color: $color-palette-primary-steel-blue;
     }
 
     & > fieldset:last-child {
