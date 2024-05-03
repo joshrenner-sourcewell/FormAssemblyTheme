@@ -42,40 +42,48 @@ $length-button-padding-x: 45px;
 
 /*TYPOGRAPHY*/
 .wFormContainer .wForm {
-  h1, h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5, h6, p {
     color: $color-palette-primary-steel-blue;
   }
 
   h1 {
-    font: $text-type-head-1 $font-type-font;
+    font: 300 50px/60px $font-type-font;
   }
 
   h2 {
-    font: $text-type-head-2 $font-type-font;
+    font: 300 42px/48px $font-type-font;
   }
 
   h3 {
-    font: $text-type-head-3 $font-type-font;
+    font: 400 28px/38px $font-type-font;
   }
 
   h4 {
-    font: $text-type-head-4 $font-type-font;
+    font: 600 24px/36px $font-type-font;
   }
 
   h5 {
-    font: $text-type-body-1 $font-type-font;
+    font: 400 20px/32px $font-type-font;
+  }
+
+  h6 {
+    font: 400 18px/30px $font-type-font;
   }
 
   p {
-    font: $text-type-body-3 $font-type-font;
+    font: 400 16px/24px $font-type-font;
+  }
+
+  small {
+    font: 400 12px/18px $font-type-font;
   }
 
   a {
-    text-decoration: $text-type-link-decoration;
+    text-decoration: none;
     color: $color-palette-active-link;
     background: none;
     &:hover {
-      text-decoration: $text-type-link-hover-decoration;
+      text-decoration: underline;
       color: $color-palette-active-hover;
     }
   }
@@ -158,6 +166,7 @@ body,
     .oneField {
       margin: 0;
       margin-bottom: 1em;
+      padding: 0;
     }
 
     /*PRIMARY ACTION*/
@@ -380,8 +389,9 @@ body,
   /*HTML SECTION*/
   .htmlSection {
     .htmlContent {
-      font-size: 100% !important;
+      @extend p;
       line-height: auto;
+
       span {
         font-size: 100% !important;
         line-height: auto;
