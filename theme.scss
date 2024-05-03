@@ -126,6 +126,11 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
   display: none !important;
 }
 
+body,
+.wForm {
+  @extend p;
+}
+
 .wFormContainer {
   /*FORM HEADER*/
   .wFormHeader {
@@ -141,8 +146,6 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
 
   /*FORM*/
   .wForm {
-    @extend p;
-    
     display: flex;
     /* prevents margin collapse on form title */
     flex-direction: column;
