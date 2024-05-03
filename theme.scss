@@ -414,99 +414,10 @@ table {
   }
 }
 
-    /*INPUTS*/
-
-/* Main container. Must wrap *all* theme CSS */
-.wFormContainer .wForm .inputWrapper { 
-
-  // this wasn't originally seperated by a comma, although it probs should have been
-  input[type='file']::-webkit-file-upload-button,
-  textarea {
-    height: 5em;
-    padding: .5rem !important;
-  }
-
-  select option {
-    padding: 0.25em .5rem;
-    font-family: $font-type-font;
-  }
-
-  textarea:focus,
-  textarea.required:focus,
-  input[type='text']:focus,
-  input[type='text'].required:focus,
-  input[type='password']:focus,
-  input[type='password'].required:focus,
-  select:focus,
-  select.required:focus {
-    outline-style: none;
-    border: 2px solid $color-palette-primary-steel-blue !important;
-    color: $color-palette-neutral-body-text;
-  }
-
-  input[type='radio'] {
-    position: absolute;
-    opacity: 0;
-
-    ~ .label {
-      position: relative;
-      cursor: pointer;
-      padding: 0;
-      margin-top: 0.3em;
-      margin-bottom: 0.4em;
-
-      &:before {
-        content: '';
-        margin-right: 10px;
-        display: inline-block;
-        vertical-align: text-top;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        border: 1px solid $color-palette-neutral-60-steel-blue;
-        background: $color-input-background-color;
-        position: relative;
-        top: -1px;
-      }
-    }
-
-    &:not(:checked):hover ~ .label:before {
-      border: 1px solid $color-palette-neutral-60-steel-blue;
-    }
-
-    &:checked ~ .label {
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        border: 5px solid $color-palette-neutral-60-steel-blue;
-        background: $color-input-background-color;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-      }
-
-      &:before {
-        border: 1px solid rgba(0, 0, 0, 0);
-      }
-    }
-
-    &:disabled + .label {
-      color: #b8b8b8;
-      cursor: auto;
-    }
-  }
-}
-
-.wFormContainer .wForm[dir="rtl"] input[type='radio']:checked ~ .label:after {
-  right: 5px;
-  top: 5px;
-}
 
 
 .wFormContainer {
-  .wForm {
+  .wForm {    
     /*INPUTS*/
     .inputWrapper {
       input {
@@ -614,6 +525,7 @@ table {
 
         /*FILE*/
         &[type='file'] {
+          font-size: 16px !important;
           border: none !important;
           background: transparent !important;
           max-width: 100%;
@@ -658,26 +570,49 @@ table {
     
       select[multiple] {
         width: auto;
-      }    
+
+        @media only screen and (max-width: 600px) {
+          width: auto;
+          -webkit-appearance: none;
+          height: 45px;
+        }        
+      }
+
+      /*MISC*/
+      input[type='file']::-webkit-file-upload-button,
+      textarea {
+        height: 5em;
+        padding: .5rem !important;
+      }
+
+      select option {
+        padding: 0.25em .5rem;
+        font-family: $font-type-font;
+      }
+
+      textarea:focus,
+      textarea.required:focus,
+      input[type='text']:focus,
+      input[type='text'].required:focus,
+      input[type='password']:focus,
+      input[type='password'].required:focus,
+      select:focus,
+      select.required:focus {
+        outline-style: none;
+        border: 2px solid $color-palette-primary-steel-blue !important;
+        color: $color-palette-neutral-body-text;
+      }
+    }
+
+    &[dir="rtl"] input[type='radio']:checked ~ .label:after {
+      right: 5px;
+      top: 5px;
     }
   }
 }
 
 /* ------------ */
 
-.wForm input[type='file'] {
-  font-size: 16px !important;
-}
-
-
-@media only screen and (max-width: 600px) {
-
-  .wFormContainer .wForm .inputWrapper select[multiple] {
-    width: auto;
-    -webkit-appearance: none;
-    height: 45px;
-  }
-}
 
 
 /* HINTS */
