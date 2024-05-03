@@ -242,8 +242,13 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 }
 
 /* Mobile Form Container in FB Canvas & Preview */
-#preview .mobile form {
-  padding: 0 1rem 2rem 1rem;
+#preview .mobile {
+  form {
+    padding: 0 1rem 2rem 1rem;
+  }
+  .wFormTitle {
+    padding: 1rem !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -258,46 +263,37 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   }
 }
 
-#preview .mobile .wFormTitle {
-  padding: 1rem !important;
-}
-
 /*SECTIONS*/
-.wFormContainer fieldset {
-  margin: 1em 0 0.5em 0;
-  color: $color-palette-neutral-body-text !important;
-  border: none;
-}
-
-.wFormContainer fieldset.highlighted {
-  border: double !important;
-  border-color: $color-palette-primary-steel-blue !important;
-}
-
-.wFormContainer .group > .label {
-  margin-top: 1em;
-}
-
-.htmlSection .htmlContent span {
-  font-size: 100% !important;
-  line-height: auto;
-
+.wFormContainer {
+  fieldset {
+    margin: 1em 0 0.5em 0;
+    color: $color-palette-neutral-body-text !important;
+    border: none;
+    &.highlighted {
+      border: double !important;
+      border-color: $color-palette-primary-steel-blue !important;
+    }
+  }
+  .group > .label {
+    margin-top: 1em;
+  }
+  fieldset > fieldset:last-child {
+    margin-bottom: 0;
+  }
+  .pageSection > *:not([type="hidden"]):last-child {
+    margin-bottom: 0;
+    color: $color-palette-primary-steel-blue;
+  }
 }
 
 .htmlSection .htmlContent {
   font-size: 100% !important;
   line-height: auto;
+  span {
+    font-size: 100% !important;
+    line-height: auto;
+  }
 }
-
-.wFormContainer fieldset > fieldset:last-child {
-  margin-bottom: 0;
-}
-
-.wFormContainer .pageSection > *:not([type="hidden"]):last-child {
-  margin-bottom: 0;
-  color: $color-palette-primary-steel-blue;
-}
-
 
 /*TABLES*/
 /* Tables */
