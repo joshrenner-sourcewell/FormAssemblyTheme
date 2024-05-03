@@ -91,6 +91,45 @@ $length-button-padding-x: 45px;
   }
 }
 
+/*MIXINS*/
+%input-list {
+  position: absolute;
+  opacity: 0;
+  margin-bottom: 1em;
+
+  ~ .label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    font-weight: 600;
+
+    &:before {
+      content: '';
+      margin-right: .6em;
+      display: inline-block;
+      vertical-align: middle;
+      width: 1em;
+      height: 1em;
+      border: 1px solid $color-palette-neutral-60-steel-blue;
+      background: $color-input-background-color;
+      position: relative;
+    }
+  }
+
+  &:checked ~ .label {
+    &:after {
+      content: '';
+      position: absolute;
+      background: $color-input-background-color;
+    }
+  }
+
+  &:disabled + .label {
+    color: $color-palette-neutral-30-steel-blue;
+    cursor: auto;
+  }
+}
+
 /*---------------------*/
 /*Combatting some phantom BS*/
 body:not(.drag) #preview .hover:not(.selected):not(tr):before {
@@ -186,28 +225,7 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
       input {
         /*CHECKBOX*/
         &[type='checkbox'] {
-          position: absolute;
-          opacity: 0;
-
-          ~ .label {
-            position: relative;
-            cursor: pointer;
-            padding: 0;
-            margin-top: 1em;
-
-            &:before {
-              content: '';
-              margin-right: 10px;
-              display: inline-block;
-              vertical-align: text-top;
-              width: 18px;
-              height: 18px;
-              border: 1px solid $color-palette-neutral-60-steel-blue;
-              background: $color-input-background-color;
-              position: relative;
-              top: -1px;
-            }
-          }
+          @extend %input-list;
 
           &:hover ~ .label:before {
             border-color: $color-palette-neutral-60-steel-blue;
@@ -218,62 +236,35 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
               background: $color-palette-neutral-body-text;
             }
 
+            /*TODO: make values responsive */
             &:after {
-              content: '';
-              position: absolute;
-              left: 5px;
-              top: 9px;
-              background: $color-input-background-color;
+              left: 4px;
+              bottom: 8px;
               width: 2px;
               height: 2px;
               box-shadow: 2px 0 0 $color-input-background-color, 4px 0 0 $color-input-background-color, 4px -2px 0 $color-input-background-color, 4px -4px 0 $color-input-background-color, 4px -6px 0 $color-input-background-color, 4px -8px 0 $color-input-background-color;
               transform: rotate(45deg);
             }
           }
-
-          &:disabled + .label {
-            color: #b8b8b8;
-            cursor: auto;
-          }
         }
 
         /*RADIO*/
         &[type='radio'] {
-          position: absolute;
-          opacity: 0;
-      
-          ~ .label {
-            position: relative;
-            cursor: pointer;
-            padding: 0;
-      
-            &:before {
-              content: '';
-              margin-right: 10px;
-              display: inline-block;
-              vertical-align: text-top;
-              width: 1em;
-              height: 1em;
-              border-radius: 50%;
-              border: 1px solid $color-palette-neutral-60-steel-blue;
-              background: $color-input-background-color;
-              position: relative;
-              top: -1px;
-            }
+          @extend %input-list;
+
+          ~ .label:before {
+            border-radius: 50%;
           }
-      
+            
           &:not(:checked):hover ~ .label:before {
             border: 1px solid $color-palette-neutral-60-steel-blue;
           }
       
           &:checked ~ .label {
             &:after {
-              content: '';
-              position: absolute;
               top: 0;
               left: 0;
               border: 5px solid $color-palette-neutral-60-steel-blue;
-              background: $color-input-background-color;
               width: 10px;
               height: 10px;
               border-radius: 50%;
@@ -282,12 +273,6 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
             &:before {
               border: 1px solid rgba(0, 0, 0, 0);
             }
-          }
-      
-          /*TODO: bring this lost child into the fold */
-          &:disabled + .label {
-            color: #b8b8b8;
-            cursor: auto;
           }
         }
 
