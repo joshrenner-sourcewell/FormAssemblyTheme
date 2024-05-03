@@ -143,6 +143,9 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
         cursor: not-allowed;
       }
     }
+
+    /*INPUTS*/
+
   }
 
   /*HTML SECTION*/
@@ -411,54 +414,10 @@ table {
   }
 }
 
-/*INPUTS*/
+    /*INPUTS*/
 
 /* Main container. Must wrap *all* theme CSS */
 .wFormContainer .wForm .inputWrapper { 
-  input[type='text'],
-  input[type='password'],
-  select,
-  textarea {
-    font-family: $font-type-font;
-    color: $color-palette-neutral-body-text;
-    border: 1px solid $color-palette-neutral-60-steel-blue;
-    border-radius: $length-input-border-radius;
-    box-sizing: border-box;
-    font-size: 1em;
-    width: 20em;
-    background-color: $color-input-background-color;
-  }
-
-  input[type='text'],
-  input[type='password'],
-  input[type='file'],
-  select:not([multiple]) {
-    height: 45px;
-    padding: 0 .5rem;
-  }
-
-  select[multiple] {
-    width: auto;
-  }
-
-  input[type='file'] {
-    border: none !important;
-    background: transparent !important;
-    max-width: 100%;
-
-    &::-webkit-file-upload-button {
-      color: $color-palette-neutral-light-background !important;
-      background-color: $color-palette-active-link !important;
-      border-radius: $length-input-border-radius !important;
-      -webkit-appearance: none !important;
-      border: none !important;
-  
-      &:hover {
-        color: $color-button-hover-text-color !important;
-        background-color: $color-button-hover-background-color !important;
-      }    
-    }
-  }
 
   // this wasn't originally seperated by a comma, although it probs should have been
   input[type='file']::-webkit-file-upload-button,
@@ -546,12 +505,12 @@ table {
 }
 
 
-/* ------------ */
-/* ------------ */
 .wFormContainer {
   .wForm {
+    /*INPUTS*/
     .inputWrapper {
       input {
+        /*CHECKBOX*/
         &[type='checkbox'] {
           position: absolute;
           opacity: 0;
@@ -597,7 +556,109 @@ table {
             cursor: auto;
           }
         }
+
+        /*RADIO*/
+        &[type='radio'] {
+          position: absolute;
+          opacity: 0;
+      
+          ~ .label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            margin-top: 0.3em;
+            margin-bottom: 0.4em;
+      
+            &:before {
+              content: '';
+              margin-right: 10px;
+              display: inline-block;
+              vertical-align: text-top;
+              width: 18px;
+              height: 18px;
+              border-radius: 50%;
+              border: 1px solid $color-palette-neutral-60-steel-blue;
+              background: $color-input-background-color;
+              position: relative;
+              top: -1px;
+            }
+          }
+      
+          &:not(:checked):hover ~ .label:before {
+            border: 1px solid $color-palette-neutral-60-steel-blue;
+          }
+      
+          &:checked ~ .label {
+            &:after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              border: 5px solid $color-palette-neutral-60-steel-blue;
+              background: $color-input-background-color;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+            }
+      
+            &:before {
+              border: 1px solid rgba(0, 0, 0, 0);
+            }
+          }
+      
+          &:disabled + .label {
+            color: #b8b8b8;
+            cursor: auto;
+          }
+        }
+
+        /*FILE*/
+        &[type='file'] {
+          border: none !important;
+          background: transparent !important;
+          max-width: 100%;
+      
+          &::-webkit-file-upload-button {
+            color: $color-palette-neutral-light-background !important;
+            background-color: $color-palette-active-link !important;
+            border-radius: $length-input-border-radius !important;
+            -webkit-appearance: none !important;
+            border: none !important;
+        
+            &:hover {
+              color: $color-button-hover-text-color !important;
+              background-color: $color-button-hover-background-color !important;
+            }    
+          }
+        }
       }
+
+      /*TEXT*/
+      input[type='text'],
+      input[type='password'],
+      select,
+      textarea {
+        font-family: $font-type-font;
+        color: $color-palette-neutral-body-text;
+        border: 1px solid $color-palette-neutral-60-steel-blue;
+        border-radius: $length-input-border-radius;
+        box-sizing: border-box;
+        font-size: 1em;
+        width: 20em;
+        background-color: $color-input-background-color;
+      }
+    
+      input[type='text'],
+      input[type='password'],
+      input[type='file'],
+      select:not([multiple]) {
+        height: 45px;
+        padding: 0 .5rem;
+      }
+    
+      select[multiple] {
+        width: auto;
+      }    
     }
   }
 }
