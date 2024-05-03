@@ -652,13 +652,16 @@ table {
 
 
 /*AUTOSUGGEST*/
-.wFormContainer .wfAutosuggest.tt-hint {
-  margin-top: 0;
+.wFormContainer .wfAutosuggest {
+  &.tt-hint {
+    margin-top: 0;
+  }
+
+  &.tt-input {
+    background-color: $color-input-background-color !important;
+  }
 }
 
-.wFormContainer .wfAutosuggest.tt-input {
-  background-color: $color-input-background-color !important;
-}
 
 .wFormContainer .tt-spinner {
   top: 0.6rem;
