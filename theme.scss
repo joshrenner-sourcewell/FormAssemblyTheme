@@ -72,6 +72,10 @@ $length-button-padding-x: 45px;
     font: $text-type-head-4 $font-type-font;
   }
 
+  h5 {
+    font: $text-type-body-1 $font-type-font;
+  }
+
   a {
     text-decoration: $text-type-link-decoration;
     color: $color-palette-active-link;
@@ -151,13 +155,17 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
       }
     }
 
+    .htmlContent > h4,
     .section.pageSection > h4 {
       @extend h2;
     }
 
-    legend, 
-    .group > .label.preField {
+    legend {
       @extend h4;
+    }
+
+    .group > .label.preField {
+      @extend h5;
     }
 
     :link,
