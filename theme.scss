@@ -25,16 +25,6 @@ $color-palette-white: #ffffff;
 
 /*TYPOGRAPHY*/
 $font-type-font: 'Source Sans Pro';
-$text-type-body-4: 400 12px/18px;
-$text-type-body-3: 400 16px/24px;
-$text-type-body-2: 400 18px/30px;
-$text-type-body-1: 400 20px/32px;
-$text-type-head-4: 600 24px/36px;
-$text-type-head-3: 400 28px/38px;
-$text-type-head-2: 300 42px/48px;
-$text-type-head-1: 300 50px/60px;
-$text-type-link-decoration: none;
-$text-type-link-hover-decoration: underline;
 
 /*FORM*/
 $color-form-background-color: $color-palette-white;
@@ -52,7 +42,7 @@ $length-button-padding-x: 45px;
 
 /*TYPOGRAPHY*/
 .wFormContainer .wForm {
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5 {
     color: $color-palette-primary-steel-blue;
   }
 
@@ -169,13 +159,13 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
 
     /*PRIMARY ACTION*/
     .primaryAction {
+      @extend h5;
       border-radius: $length-button-border-radius;
       background-color: $color-palette-active-link !important;
       color: $color-palette-neutral-light-background !important;
       margin-top: 1.6em;
       padding: $length-button-padding-y $length-button-padding-x;
       border: none;
-      font: $text-type-body-1 $font-type-font;
       font-weight: bold;
       -webkit-appearance: none;
 
@@ -580,7 +570,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 /* In form builder scss variable not applied for checkbox labels */
 table {
-  font: $text-type-body-2;
+  @extend h6;
 }
 
 .wForm .gridLayout.stacked {
@@ -695,7 +685,7 @@ table {
 }
 
 .tt-suggestion {
-  font: $text-type-body-2 $font-type-font;
+  @extend h6;
   color: $color-palette-neutral-body-text !important;
 }
 
