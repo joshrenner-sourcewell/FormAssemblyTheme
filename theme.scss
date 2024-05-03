@@ -58,8 +58,6 @@ $length-button-padding-x: 45px;
 
   h1 {
     font: $text-type-head-1 $font-type-font;
-    padding: 1.75rem 0;
-    margin: 0;  
   }
 
   h2 {
@@ -145,6 +143,8 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
     /*TYPOGRAPHY*/
     .wFormTitle {
       @extend h1;
+      padding: 1.75rem 0;
+      margin: 0;  
       @media only screen and (max-width: 600px) {
         margin: 0;
         padding: 1rem !important;
@@ -366,6 +366,12 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
       right: 5px;
       top: 5px;
     }
+
+    .fa-search.tt-search,
+    .fa-spinner.tt-spinner,
+    .fa-times-circle.tt-clear {
+      color: $color-palette-neutral-body-text;
+    }  
   }
 
   /*HTML SECTION*/
@@ -455,14 +461,6 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
 
 .reviewActions {
   margin-top: 1.6em !important;
-}
-
-.wForm {
-  .fa-search.tt-search,
-  .fa-spinner.tt-spinner,
-  .fa-times-circle.tt-clear {
-    color: $color-palette-neutral-body-text;
-  }
 }
 
 /*HOSTED FORMS*/
