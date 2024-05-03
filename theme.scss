@@ -57,6 +57,7 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
 }
 
 .wFormContainer {
+  /*FORM HEADER*/
   .wFormHeader {
     display: flex;
     height: 60px;
@@ -66,6 +67,7 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
     margin-bottom: 3em;
   }
 
+  /*FORM*/
   .wForm {
     display: flex;
     /* prevents margin collapse on form title */
@@ -76,6 +78,7 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
     font: $text-type-body-3 $font-type-font;
     color: $color-palette-neutral-body-text;
 
+    /*HEADLINES*/
     h1, h2, h3, h4, .wFormTitle {
       color: $color-palette-primary-steel-blue;
     }
@@ -114,6 +117,7 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
       }
     }
 
+    /*FORM ACTION BUTTON*/
     input[type="submit"],
     .primaryAction,
     .wfPageNextButton {
@@ -141,6 +145,7 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
     }
   }
 
+  /*HTML SECTION*/
   .htmlSection {
     margin: 1em auto;
 
@@ -154,17 +159,20 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
     }
   }
 
+  /*FORM HELP*/
   .wFormHelp {
     padding: 20px 30px !important;
     min-height: 110px !important;
   }
 }
 
+/*FORM THANK YOU*/
 .wFormThankYou {
   padding: 20px 30px !important;
   min-height: 110px !important;
 }
 
+/*REVIEW*/
 .reviewHeader,
 .reviewResponse,
 .reviewFooter {
@@ -176,6 +184,7 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
   color: $color-palette-neutral-body-text !important;
 }
 
+/*SAVE AND RESUME*/
 .saveAndResume {
   font-size: .9em;
 }
@@ -194,6 +203,7 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
   padding: 0 !important;
 }
 
+/*TODO: seperate unscoped inputs from this block */
 .required:not(.choices):not(select):not(.wfAutosuggest) {
   padding: 0 .5rem !important;
 }
@@ -215,6 +225,7 @@ input[type='password']#password:focus {
   color: $color-palette-neutral-body-text;
 }
 
+/*TODO: the following rules are orphaned */
 input.primaryAction.slds-button.slds-button--brand.full-width {
   margin-top: 0 !important;
 }
@@ -231,7 +242,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   }
 }
 
-
+/*HOSTED FORMS*/
 /* Optional - Apply for FormAssembly hosted forms only. */
 .wFormWebPage {
   background-color: $color-form-background-color;
@@ -250,6 +261,7 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   }
 }
 
+/*MOBILE FORM CONTAINER*/
 /* Mobile Form Container in FB Canvas & Preview */
 #preview .mobile {
   form {
