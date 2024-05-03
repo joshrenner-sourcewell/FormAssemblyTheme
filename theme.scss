@@ -246,29 +246,17 @@ input.primaryAction.slds-button.slds-button--brand.full-width {
   padding: 0 1rem 2rem 1rem;
 }
 
-
-/*HEADER AND LOGO*/
 @media only screen and (max-width: 600px) {
-  .wFormContainer .wFormHeader {
-    margin-left: 0.5em;
+  .wFormContainer {
+    .wFormHeader {
+      margin-left: 0.5em;
+    }
+    .wForm .wFormTitle {
+      margin: 0;
+      padding: 1rem !important;
+    }
   }
 }
-
-/*TITLE AND HEADINGS*/
-
-/*Mobile Canvas & Preview in FB*/
-
-@media only screen and (max-width: 600px) {
-  .wFormContainer .wForm .wFormTitle {
-    margin: 0;
-  }
-
-  .wFormContainer .wForm .wFormTitle {
-    padding: 1rem !important;
-  }
-}
-
-/*Mobile Title in FB Canvas & Preview*/
 
 #preview .mobile .wFormTitle {
   padding: 1rem !important;
