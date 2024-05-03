@@ -76,6 +76,10 @@ $length-button-padding-x: 45px;
     font: $text-type-body-1 $font-type-font;
   }
 
+  p {
+    font: $text-type-body-3 $font-type-font;
+  }
+
   a {
     text-decoration: $text-type-link-decoration;
     color: $color-palette-active-link;
@@ -108,13 +112,14 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
 
   /*FORM*/
   .wForm {
+    @extend p;
+    
     display: flex;
     /* prevents margin collapse on form title */
     flex-direction: column;
     padding: 0 !important;
     margin-top: 1em;
     border: none;
-    font: $text-type-body-3 $font-type-font;
     color: $color-palette-neutral-body-text;
 
     /*PRIMARY ACTION*/
@@ -604,8 +609,7 @@ table {
 /*LABELS*/
 .wFormContainer {
   .label {
-    font-weight: 400;
-    font-family: $font-type-font;
+    @extend p;
 
     &.preField {
       line-height: auto;
