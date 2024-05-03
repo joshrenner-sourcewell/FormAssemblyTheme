@@ -78,6 +78,31 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
     font: $text-type-body-3 $font-type-font;
     color: $color-palette-neutral-body-text;
 
+    /*PRIMARY ACTION*/
+    .primaryAction {
+      border-radius: $length-button-border-radius;
+      background-color: $color-palette-active-link !important;
+      color: $color-palette-neutral-light-background !important;
+      margin-top: 1.6em;
+      padding: $length-button-padding-y $length-button-padding-x;
+      border: none;
+      font: $text-type-body-1 $font-type-font;
+      font-weight: bold;
+      -webkit-appearance: none;
+
+      &:hover {
+        color: $color-button-hover-text-color;
+        background-color: $color-button-hover-background-color;
+      }
+
+      &:disabled {
+        color: $color-palette-neutral-30-steel-blue;
+        -webkit-appearance: none;
+        border-radius: $length-button-border-radius;
+        cursor: not-allowed;
+      }
+    }
+
     /*HEADLINES*/
     h1, h2, h3, h4, .wFormTitle {
       color: $color-palette-primary-steel-blue;
@@ -117,31 +142,9 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
       }
     }
 
-    /*FORM ACTION BUTTON*/
     input[type="submit"],
-    .primaryAction,
     .wfPageNextButton {
-      border-radius: $length-button-border-radius;
-      background-color: $color-palette-active-link !important;
-      color: $color-palette-neutral-light-background !important;
-      margin-top: 1.6em;
-      padding: $length-button-padding-y $length-button-padding-x;
-      border: none;
-      font: $text-type-body-1 $font-type-font;
-      font-weight: bold;
-      -webkit-appearance: none;
-
-      &:hover {
-        color: $color-button-hover-text-color;
-        background-color: $color-button-hover-background-color;
-      }
-
-      &:disabled {
-        color: $color-palette-neutral-30-steel-blue;
-        -webkit-appearance: none;
-        border-radius: $length-button-border-radius;
-        cursor: not-allowed;
-      }
+      @extend .primaryAction
     }
 
     /*INPUTS*/
@@ -193,7 +196,7 @@ body:not(.drag) #preview .hover:not(.selected):not(tr):before {
               transform: rotate(45deg);
             }
           }
-          
+
           &:disabled + .label {
             color: #b8b8b8;
             cursor: auto;
