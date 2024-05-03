@@ -680,16 +680,18 @@ table {
 }
 
 /*ERRORS*/
-.wFormContainer .oneField.errFld .inputWrapper input[type='text'],
-.wFormContainer .oneField.errFld .inputWrapper input[type='password'],
-.wFormContainer .oneField.errFld .inputWrapper textarea,
-.wFormContainer .oneField.errFld .inputWrapper select {
-  border-color: $color-palette-error !important;
-}
+.wFormContainer .oneField.errFld {
+  .inputWrapper input[type='text'],
+  .inputWrapper input[type='password'],
+  .inputWrapper textarea,
+  .inputWrapper select {
+    border-color: $color-palette-error !important;
+  }
 
-.wFormContainer .oneField.errFld div.errMsg {
-  margin-top: 0.5em;
-  color: $color-palette-error;
+  div.errMsg {
+    margin-top: 0.5em;
+    color: $color-palette-error;
+  }
 }
 
 .errorMessage {
